@@ -1,0 +1,79 @@
+{
+ "_note": "Ответ /api/admin/printer_status 20.07.2026 ~12:58 (кэш фонового MQTT-подписчика, принтер в простое). Доказывает: canvas_info (слоты CANVAS) и ztemperature_sensor (температура камеры) ПРИХОДЯТ в вещательной телеметрии api_status — привязка клиента для них не нужна. camera_url удалён из снимка.",
+ "age": 2.4,
+ "cached": true,
+ "ok": true,
+ "online": true,
+ "serial": "F01AKDEMO000000",
+ "state": {
+  "canvas_info": {
+   "canvas_list": [
+    {
+     "canvas_id": 0,
+     "connected": 1,
+     "tray_list": [
+      {
+       "brand": "ELEGOO",
+       "filament_code": "0x0003",
+       "filament_color": "#A03BF7",
+       "filament_name": "PLA Silk",
+       "filament_type": "PLA",
+       "max_nozzle_temp": 230,
+       "min_nozzle_temp": 190,
+       "status": 1,
+       "tray_id": 0
+      },
+      {
+       "brand": "ELEGOO",
+       "filament_code": "0x0006",
+       "filament_color": "#09CC3A",
+       "filament_name": "PLA Matte",
+       "filament_type": "PLA",
+       "max_nozzle_temp": 230,
+       "min_nozzle_temp": 190,
+       "status": 1,
+       "tray_id": 1
+      },
+      {
+       "brand": "ELEGOO",
+       "filament_code": "0x0100",
+       "filament_color": "#F88D36",
+       "filament_name": "PETG",
+       "filament_type": "PETG",
+       "max_nozzle_temp": 260,
+       "min_nozzle_temp": 230,
+       "status": 1,
+       "tray_id": 2
+      },
+      {
+       "brand": "ELEGOO",
+       "filament_code": "0x0006",
+       "filament_color": "#D2C5A3",
+       "filament_name": "PLA Matte",
+       "filament_type": "PLA",
+       "max_nozzle_temp": 230,
+       "min_nozzle_temp": 190,
+       "status": 1,
+       "tray_id": 3
+      }
+     ]
+    }
+   ]
+  },
+  "extruder": {
+   "temperature": 29
+  },
+  "heater_bed": {
+   "temperature": 26
+  },
+  "ztemperature_sensor": {
+   "temperature": 26
+  }
+ },
+ "summary": {
+  "bed_target": null,
+  "bed_temp": 26,
+  "extruder_target": null,
+  "extruder_temp": 29
+ }
+}

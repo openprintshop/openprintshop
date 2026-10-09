@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  MSI-обёртка OpenPrintShop (OpenTodo bc0a8176). Схема WiX v4/v5 (wix build).
+
+  Философия: MSI НЕ дублирует логику установки. Вся установка (Python, Git, venv, сторож)
+  живёт в install.ps1 — MSI лишь доставляет его на машину, спрашивает у клиента настройки
+  и передаёт эстафету. Так «поставил MSI» и «запустил install.ps1 руками» дают одинаковый
+  результат, а обновление логики установки не требует пересборки MSI.
+
+  Мастер: три своих страницы (бот, студия, лицензия) плюс стандартные приветствие и финал.
+  Каждое поле снабжено пояснением прямо в окне — клиент ставит систему в первый и
+  единственный раз, ему негде подсмотреть.
+
+  Сборка: .\build_msi.ps1 (нужен WiX CLI и расширение UI; команды в build_msi.ps1 —
+  внутри XML-комментария их не написать из-за двойного дефиса).
+-->
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+     xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+
+  <?ifndef RepoUrl ?>
+    <?define RepoUrl = "" ?>
+  <?endif?>
+  <!-- Ветка, с которой ставится код: main — стабильная ветка открытой версии; сборка
+       для испытаний — с испытуемой веткой, чтобы проверять правки до публикации. -->
+  <?ifndef Branch ?>
+    <?define Branch = "main" ?>
+  <?endif?>
+
+  <Package Name="OpenPrintShop"
+           Manufacturer="OpenPrintShop"
+           Version="1.0.0"
+           UpgradeCode="91717D3C-09A6-486E-811F-DE21D1536883"
+           Language="1049"
+           Codepage="1251"
+           Scope="perMachine"
+           Compressed="yes">
+
+    <MajorUpgrade DowngradeErrorMessage="Уже установлена более новая версия OpenPrintShop." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- ==================== Ответы клиента ====================
+         Свойства ОБЯЗАНЫ быть Secure, иначе при установке с повышением их значения не
+         доедут до отложенного действия и мастер окажется декоративным. -->
+    <Property Id="PSB_BOTTOKEN"  Secure="yes" />
+    <Property Id="PSB_ADMINIDS"  Secure="yes" />
+    <Property Id="PSB_CURRENCY"  Secure="yes" Value="руб." />
+    <Property Id="PSB_STUDIO"    Secure="yes" />
+    <Property Id="PSB_DATADIR"   Secure="yes" Value="C:\OpenPrintShop\bot\data" />
+    <!-- Опциональные модули. По умолчанию ВЫКЛЮЧЕНЫ: до разделения (28.08.2026) весь этот
+         груз ехал каждому покупателю, из-за чего установка занимала около часа, а большая
+         часть не могла заработать в принципе.
+         ЗНАЧЕНИЯ ЗДЕСЬ БЫТЬ НЕ ДОЛЖНО. Галочка Windows Installer считается снятой, только
+         когда свойство ПУСТОЕ; «0» — такое же непустое значение, как «1», и все три
+         галочки приезжали к покупателю ВЗВЕДЁННЫМИ (поймано на стенде 29.08 — в тихой
+         установке дефект не виден, там свойства приходят из командной строки).
+         Включает модуль ровно «1»: столько же понимает install.ps1. -->
+    <Property Id="PSB_AI"        Secure="yes" />
+    <Property Id="PSB_SEMSEARCH" Secure="yes" />
+
+    <!-- Файлы установщика -->
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="OpenPrintShop">
+        <Component Id="C_InstallScript">
+          <File Id="F_InstallPs1" Source="install.ps1" KeyPath="yes" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+
+    <!-- Ярлык в меню «Пуск»: повторный запуск установки = обновление/починка.
+         Ярлык самой админки ставит install.ps1 — MSI не знает, куда приедет код. -->
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="AppMenuFolder" Name="OpenPrintShop">
+        <Component Id="C_Shortcuts">
+          <Shortcut Id="S_Install"
+                    Name="Установить или обновить OpenPrintShop"
+                    Target="[System64Folder]WindowsPowerShell\v1.0\powershell.exe"
+                    Arguments="-NoProfile -ExecutionPolicy Bypass -File &quot;[INSTALLFOLDER]install.ps1&quot; -RepoUrl &quot;$(var.RepoUrl)&quot;"
+                    WorkingDirectory="INSTALLFOLDER" />
+          <RemoveFolder Id="RF_AppMenu" On="uninstall" />
+          <RegistryValue Root="HKCU" Key="Software\OpenPrintShop\Bot"
+                         Name="installer_shortcuts" Type="integer" Value="1" KeyPath="yes" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+
+    <!-- Ответы мастера едут в реестр, а НЕ в командную строку custom action: при передаче
+         аргументами кириллица (валюта «р.», название студии) превращается в «СЂ.» —
+         командная строка проходит через ANSI-кодировку системы. Таблица Registry в MSI
+         хранит строки в Unicode, поэтому здесь значения доезжают в целости.
+         Ключ читает и СРАЗУ удаляет install.ps1 — в нём лежит токен бота. -->
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="SetupPropsDir" Name="OpenPrintShop">
+        <Component Id="C_SetupProps" Guid="C4E1A7B2-5F30-4D18-9E62-8A7B0C3D4E51">
+          <RegistryKey Root="HKLM" Key="SOFTWARE\OpenPrintShop\Setup" ForceDeleteOnUninstall="yes">
+            <RegistryValue Name="Marker"     Type="string" Value="1" KeyPath="yes" />
+            <RegistryValue Name="RepoUrl"    Type="string" Value="$(var.RepoUrl)" />
+            <RegistryValue Name="Branch"     Type="string" Value="$(var.Branch)" />
+            <RegistryValue Name="BotToken"   Type="string" Value="[PSB_BOTTOKEN]" />
+            <RegistryValue Name="AdminIds"   Type="string" Value="[PSB_ADMINIDS]" />
+            <RegistryValue Name="Currency"   Type="string" Value="[PSB_CURRENCY]" />
+            <RegistryValue Name="StudioName" Type="string" Value="[PSB_STUDIO]" />
+            <RegistryValue Name="DataDir"    Type="string" Value="[PSB_DATADIR]" />
+            <RegistryValue Name="WithAvatarAi"    Type="string" Value="[PSB_AI]" />
+            <RegistryValue Name="WithSmartSearch" Type="string" Value="[PSB_SEMSEARCH]" />
+          </RegistryKey>
+        </Component>
+      </Directory>
+    </StandardDirectory>
+
+    <Feature Id="Main" Title="OpenPrintShop" Level="1">
+      <ComponentRef Id="C_InstallScript" />
+      <ComponentRef Id="C_Shortcuts" />
+      <ComponentRef Id="C_SetupProps" />
+    </Feature>
+
+    <!-- ЭСТАФЕТА, а не запуск: изнутри custom action ставить зависимости нельзя —
+         Windows Installer держит глобальную блокировку, и любой вложенный установщик
+         (winget, python.org) падает с 1618 (поймано стендом 27.08). -Handoff лишь
+         заказывает разовую задачу Планировщика, которая запускает установку в сеансе
+         пользователя ПОСЛЕ завершения этого MSI.
+
+         Ответы мастера едут в отложенное действие через CustomActionData: у deferred-
+         действия своих свойств нет вовсе, оно видит только эту строку. -->
+    <!-- В командной строке — ничего, кроме ключа -Handoff: все ответы клиента установщик
+         возьмёт из реестра (см. C_SetupProps выше), чтобы не потерять кириллицу. -->
+    <CustomAction Id="CA_SetBootstrapData" Property="CA_RunBootstrap"
+                  Value="&quot;[System64Folder]WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -ExecutionPolicy Bypass -File &quot;[INSTALLFOLDER]install.ps1&quot; -Handoff" />
+
+    <CustomAction Id="CA_RunBootstrap"
+                  BinaryRef="Wix4UtilCA_X64"
+                  DllEntry="WixQuietExec64"
+                  Execute="deferred"
+                  Impersonate="yes"
+                  Return="ignore" />
+
+    <InstallExecuteSequence>
+      <Custom Action="CA_SetBootstrapData" After="CostFinalize" Condition="NOT Installed" />
+      <!-- ПОСЛЕ WriteRegistryValues, а не после InstallFiles: ответы мастера лежат в
+           реестре, а он пишется ПОЗЖЕ файлов. С прежним порядком эстафета читала ещё
+           не созданный ключ и уносила дефолты — клиент получал .env из шаблона
+           (поймано сквозным прогоном 28.08). -->
+      <Custom Action="CA_RunBootstrap" After="WriteRegistryValues" Condition="NOT Installed" />
+    </InstallExecuteSequence>
+
+    <!-- ==== Мастер ====
+         WixUI_InstallDir, а не Minimal: у Minimal нет ни WelcomeDlg, ни VerifyReadyDlg —
+         он показывает единственный WelcomeEulaDlg, и вклиниться между приветствием и
+         установкой некуда (проверено на стенде 28.08). Здесь же есть и приветствие,
+         и страница подтверждения, между которыми и живут наши три страницы. -->
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <ui:WixUI Id="WixUI_InstallDir" />
+    <UIRef Id="WixUI_Common" />
+
+    <UI Id="PsbUI">
+      <!-- Список валют. Это ПОДПИСЬ к числу, а не курс: пересчёта в продукте нет. -->
+      <ComboBox Property="PSB_CURRENCY">
+        <ListItem Value="руб." Text="руб. — российский рубль" />
+        <ListItem Value="р."   Text="р. — белорусский рубль" />
+        <ListItem Value="$"    Text="$ — доллар США" />
+        <ListItem Value="€"    Text="€ — евро" />
+        <ListItem Value="тг"   Text="тг — казахский тенге" />
+        <ListItem Value="грн"  Text="грн — гривна" />
+        <ListItem Value="zl"   Text="zl — польский злотый" />
+        <ListItem Value="сом"  Text="сом — киргизский сом" />
+      </ComboBox>
+
+      <!-- Свои страницы вклиниваются между приветствием и подтверждением. Order выше
+           умолчаний набора: последний сработавший NewDialog и решает, куда идти, поэтому
+           штатные переходы (на лицензию и выбор каталога) перекрываются нашими. -->
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="PsbBotDlg" Order="99" Condition="1" />
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="PsbModulesDlg" Order="99" Condition="1" />
+
+      <!-- ========== 1. Телеграм-бот ========== -->
+      <Dialog Id="PsbBotDlg" Width="370" Height="270" Title="OpenPrintShop — телеграм-бот">
+        <Control Id="Title" Type="Text" X="15" Y="6" Width="340" Height="15" Transparent="yes" NoPrefix="yes"
+                 Text="{\WixUI_Font_Title}Ваш телеграм-бот" />
+        <Control Id="Descr" Type="Text" X="25" Y="23" Width="330" Height="30" Transparent="yes" NoPrefix="yes"
+                 Text="Заказы принимает бот, которого вы создаёте сами — он остаётся вашим. Поля можно оставить пустыми и заполнить позже в файле .env." />
+        <Control Id="BannerLine" Type="Line" X="0" Y="55" Width="370" Height="0" />
+
+        <Control Id="HowLbl" Type="Text" X="25" Y="65" Width="320" Height="42" NoPrefix="yes"
+                 Text="Как получить токен: откройте в Telegram чат с @BotFather, отправьте /newbot, придумайте имя и адрес бота. В ответ придёт строка вида 1234567:AAH... — это и есть токен." />
+
+        <Control Id="TokenLbl" Type="Text" X="25" Y="112" Width="100" Height="10" NoPrefix="yes" Text="Токен бота:" />
+        <Control Id="TokenEdit" Type="Edit" X="25" Y="124" Width="320" Height="17" Property="PSB_BOTTOKEN" />
+
+        <Control Id="IdsLbl" Type="Text" X="25" Y="150" Width="320" Height="10" NoPrefix="yes"
+                 Text="Ваш Telegram ID (несколько — через запятую):" />
+        <Control Id="IdsEdit" Type="Edit" X="25" Y="162" Width="320" Height="17" Property="PSB_ADMINIDS" />
+        <Control Id="IdsHint" Type="Text" X="25" Y="182" Width="320" Height="30" NoPrefix="yes"
+                 Text="Узнать свой ID: напишите боту @userinfobot — он ответит числом. Указанные здесь люди получат права владельца студии." />
+
+        <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="!(loc.WixUIBack)">
+          <Publish Event="NewDialog" Value="WelcomeDlg" />
+        </Control>
+        <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
+          <Publish Event="NewDialog" Value="PsbStudioDlg" />
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg" />
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+      </Dialog>
+
+      <!-- ========== 2. Студия ========== -->
+      <Dialog Id="PsbStudioDlg" Width="370" Height="270" Title="OpenPrintShop — ваша студия">
+        <Control Id="Title" Type="Text" X="15" Y="6" Width="340" Height="15" Transparent="yes" NoPrefix="yes"
+                 Text="{\WixUI_Font_Title}Ваша студия" />
+        <Control Id="Descr" Type="Text" X="25" Y="23" Width="330" Height="24" Transparent="yes" NoPrefix="yes"
+                 Text="Как система будет выглядеть для ваших клиентов и где будет хранить данные." />
+        <Control Id="BannerLine" Type="Line" X="0" Y="55" Width="370" Height="0" />
+
+        <Control Id="NameLbl" Type="Text" X="25" Y="66" Width="320" Height="10" NoPrefix="yes" Text="Название студии:" />
+        <Control Id="NameEdit" Type="Edit" X="25" Y="78" Width="320" Height="17" Property="PSB_STUDIO" />
+        <Control Id="NameHint" Type="Text" X="25" Y="98" Width="320" Height="20" NoPrefix="yes"
+                 Text="Видно клиентам в шапке мини-приложения. Пусто — останется «OpenPrintShop»." />
+
+        <Control Id="CurLbl" Type="Text" X="25" Y="122" Width="320" Height="10" NoPrefix="yes" Text="Валюта:" />
+        <Control Id="CurBox" Type="ComboBox" X="25" Y="134" Width="180" Height="17" Property="PSB_CURRENCY"
+                 ComboList="yes" Sorted="no" />
+        <Control Id="CurHint" Type="Text" X="25" Y="154" Width="320" Height="20" NoPrefix="yes"
+                 Text="Это подпись рядом с суммой. Пересчёта по курсу нет — цены вы задаёте сами." />
+
+        <Control Id="DataLbl" Type="Text" X="25" Y="178" Width="320" Height="10" NoPrefix="yes" Text="Каталог данных:" />
+        <Control Id="DataEdit" Type="Edit" X="25" Y="190" Width="320" Height="17" Property="PSB_DATADIR" />
+        <Control Id="DataHint" Type="Text" X="25" Y="210" Width="320" Height="20" NoPrefix="yes"
+                 Text="База, фото моделей, бэкапы. Разрастается — если есть отдельный диск, укажите его." />
+
+        <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="!(loc.WixUIBack)">
+          <Publish Event="NewDialog" Value="PsbBotDlg" />
+        </Control>
+        <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
+          <Publish Event="NewDialog" Value="PsbModulesDlg" />
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg" />
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+      </Dialog>
+
+      <!-- ========== 4. Дополнительные возможности ========== -->
+      <Dialog Id="PsbModulesDlg" Width="370" Height="270" Title="OpenPrintShop — дополнительно">
+        <Control Id="Title" Type="Text" X="15" Y="6" Width="340" Height="15" Transparent="yes" NoPrefix="yes"
+                 Text="{\WixUI_Font_Title}Дополнительные возможности" />
+        <Control Id="Descr" Type="Text" X="25" Y="23" Width="330" Height="30" Transparent="yes" NoPrefix="yes"
+                 Text="Без них студия работает полностью: принимает заказы, считает цену, ведёт клиентов. Включить любую позже: tools\installer\modules.ps1 -Enable ai в папке установки." />
+        <Control Id="BannerLine" Type="Line" X="0" Y="55" Width="370" Height="0" />
+
+        <Control Id="AiCheck" Type="CheckBox" X="25" Y="66" Width="330" Height="12" Property="PSB_AI"
+                 CheckBoxValue="1" Text="Аватарки клиентов, нарисованные ИИ" />
+        <Control Id="AiHint" Type="Text" X="38" Y="80" Width="317" Height="30" NoPrefix="yes"
+                 Text="Нужна видеокарта NVIDIA. Добавит около часа к установке и 1,3 ГБ на диск. Без неё аватарки рисуются узором в фирменном стиле." />
+
+        <Control Id="SemCheck" Type="CheckBox" X="25" Y="114" Width="330" Height="12" Property="PSB_SEMSEARCH"
+                 CheckBoxValue="1" Text="Умный поиск по каталогу" />
+        <Control Id="SemHint" Type="Text" X="38" Y="128" Width="317" Height="30" NoPrefix="yes"
+                 Text="Запрос «дракон» найдёт «Яйцо дракона» без совпадения букв. Тот же объём загрузки, что и у аватарок — если включены обе, качается один раз." />
+
+        <Control Id="TimeHint" Type="Text" X="25" Y="162" Width="330" Height="40" NoPrefix="yes"
+                 Text="Установка ядра занимает 5–10 минут: система скачает Python, Git и библиотеки — окно с ходом работы откроется само после нажатия «Установить». Не выключайте компьютер." />
+
+        <Control Id="Warn" Type="Text" X="25" Y="210" Width="330" Height="20" NoPrefix="yes"
+                 Text="При первом использовании выбранные возможности догрузят из интернета несколько гигабайт — это нормально и происходит один раз." />
+
+        <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="!(loc.WixUIBack)">
+          <Publish Event="NewDialog" Value="PsbStudioDlg" />
+        </Control>
+        <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
+          <Publish Event="NewDialog" Value="VerifyReadyDlg" />
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg" />
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+      </Dialog>
+    </UI>
+  </Package>
+</Wix>

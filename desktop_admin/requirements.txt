@@ -1,0 +1,5 @@
+# Оболочка ПК-админки (desktop_admin/shell.py) — отдельный venv, зависимости бота не трогаем.
+pywebview>=5.1
+windows-toasts>=1.1
+pystray>=0.19
+Pillow>=10.0

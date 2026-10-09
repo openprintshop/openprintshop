@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>%%BRAND_NAME%% — админка мастерской</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<!-- Шрифты Onest + JetBrains Mono уже завендорены для мини-аппа — переиспользуем.
+     Google Fonts из прототипа не подключаем: окно обязано открываться без интернета. -->
+<link rel="stylesheet" href="../vendor/fonts/fonts.css">
+<link rel="stylesheet" href="desktop.css">
+<!-- Бренд мастерской (A3): тот же контракт, что в мини-аппе — сервер подставляет JSON
+     в разметку, фронт только читает. Мастер видит своё имя и свой акцент. -->
+<script type="application/json" id="brand-cfg">%%BRAND_JSON%%</script>
+<!-- Возможности сборки (f98aa1ef): {ключ: включена}. Сервер вшивает их сюда, потому что
+     сайдбар рисуется до первого запроса — иначе раздел выключенной фичи успел бы мигнуть. -->
+<script type="application/json" id="features-cfg">%%FEATURES_JSON%%</script>
+<script>
+window.__BRAND__ = (function () {
+  try { return JSON.parse(document.getElementById('brand-cfg').textContent) || {}; }
+  catch (e) { return {}; }
+})();
+window.__FEATURES__ = (function () {
+  try { return JSON.parse(document.getElementById('features-cfg').textContent) || {}; }
+  catch (e) { return {}; }
+})();
+if (window.__BRAND__.accent) {
+  document.documentElement.style.setProperty('--accent', window.__BRAND__.accent);
+}
+</script>
+</head>
+<body>
+<div id="root"></div>
+<!-- React берётся локально (production-сборки), как и в мини-аппе. -->
+<script src="../vendor/react.production.min.js"></script>
+<script src="../vendor/react-dom.production.min.js"></script>
+<!-- Сетевой слой мини-аппа переиспользуется целиком: авторизация зашита в форму запроса
+     (GET — initData в query, POST — в теле), свой fetch писать нельзя. -->
+<script src="../api.js"></script>
+<!-- Собран из src/*.jsx через esbuild: npm run build:desk -->
+<script src="desk.js"></script>
+</body>
+</html>

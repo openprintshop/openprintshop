@@ -1,0 +1,740 @@
+/* Print Studio — настольная админка. Порт desktop.css из design_handoff_desktop.
+   Идеал 3440x1440 (21:9), рабочий минимум 1920x1080. */
+:root{
+  --bg:#0e1217; --bg-2:#0a0e12; --surface:#161d26; --surface-2:#1e2733; --raise:#243040;
+  --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.12);
+  --text:#eef2f7; --muted:#95a3b2; --faint:#5f6e7d;
+  --accent:#ff7a1a; --accent-soft:color-mix(in srgb,var(--accent) 14%,transparent); --accent-line:color-mix(in srgb,var(--accent) 42%,transparent);
+  --price:#2dd47e; --price-soft:rgba(45,212,126,.13);
+  --amber:#ffb020; --amber-soft:rgba(255,176,32,.14);
+  --red:#ff5b4d; --red-soft:rgba(255,91,77,.14);
+  --violet:#a98bff; --violet-soft:rgba(169,139,255,.14);
+  --blue:#4da3ff; --blue-soft:rgba(77,163,255,.13);
+  --ui:'Onest',-apple-system,system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);overflow:hidden}
+#root{height:100%}
+/* Витринный холст 3440x1440 с transform:scale() из прототипа снят: окно тянется на всю
+   доступную ширину. Типографика переехала с .stage на .app. */
+.viewport{height:100%}
+.app{display:flex;width:100%;height:100%;background:var(--bg);color:var(--text);font-family:var(--ui);font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased;letter-spacing:.1px;overflow:hidden;position:relative}
+.mono{font-family:var(--mono);font-feature-settings:"tnum"}
+::selection{background:var(--accent-line)}
+a{color:var(--accent);text-decoration:none}a:hover{color:#ffa259;text-decoration:underline}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:var(--raise);border-radius:5px;border:2px solid var(--bg)}::-webkit-scrollbar-track{background:transparent}
+
+/* ---------- sidebar ---------- */
+.sb{width:300px;flex:0 0 auto;background:var(--bg-2);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:5}
+.sb-brand{display:flex;align-items:center;gap:11px;padding:22px 22px 16px}
+.sb-brand .wm{font-size:15.5px;font-weight:700;letter-spacing:.5px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.sb-brand .wm em{color:var(--accent);font-style:normal}
+/* Логотип мастерской (A3): contain — чужой лого произвольной пропорции обрезать нельзя */
+.sb-logo{flex:0 0 auto;object-fit:contain;border-radius:6px}
+.sb-brand .env{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.6px;color:var(--amber);background:var(--amber-soft);border:1px solid rgba(255,176,32,.3);padding:3px 8px;border-radius:7px;text-transform:uppercase}
+.sb-nav{flex:1;overflow-y:auto;padding:6px 14px 14px}
+.sb-lab{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--faint);margin:18px 10px 7px}
+.sb-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:11px;color:var(--muted);font-size:14.5px;font-weight:500;cursor:pointer;border:0;background:none;width:100%;font-family:var(--ui);text-align:left;position:relative}
+.sb-item:hover{background:var(--surface);color:var(--text)}
+.sb-item.on{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.sb-item.on::before{content:'';position:absolute;left:-14px;top:9px;bottom:9px;width:3px;border-radius:0 3px 3px 0;background:var(--accent)}
+.sb-item .bdg{margin-left:auto;font-family:var(--mono);font-size:11px;font-weight:700;background:var(--accent);color:#1a0d02;border-radius:999px;padding:1px 7px}
+.sb-item .bdg.mut{background:var(--raise);color:var(--muted)}
+.sb-item .live{margin-left:auto;display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10.5px;color:var(--price)}
+.sb-foot{padding:14px 22px 18px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.sb-foot .ver{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.4px}
+
+/* ---------- topbar ---------- */
+.content{flex:1;min-width:0;display:flex;flex-direction:column}
+.tb{height:70px;flex:0 0 auto;display:flex;align-items:center;gap:20px;padding:0 32px;border-bottom:1px solid var(--line);background:var(--bg-2)}
+.tb-title{font-size:20px;font-weight:700;letter-spacing:.2px;white-space:nowrap}
+.tb-title span{color:var(--faint);font-weight:500;font-size:14px;margin-left:12px}
+.tb-search{flex:0 1 560px;display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--line-2);border-radius:12px;padding:10px 15px;color:var(--faint);cursor:text;font-size:14px;margin-left:24px}
+.tb-search:hover{border-color:var(--accent-line)}
+.tb-search .grow{flex:1}
+.tb-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.tb-chip{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line-2);border-radius:11px;padding:8px 14px;font-size:13px;color:var(--muted);cursor:pointer}
+.tb-chip:hover{background:var(--surface-2)}
+.tb-chip .pdot{width:7px;height:7px;border-radius:50%;background:var(--price);box-shadow:0 0 0 3px rgba(45,212,126,.18);animation:pulse 1.6s infinite}
+.tb-clock{font-family:var(--mono);font-size:14px;color:var(--muted);letter-spacing:.5px}
+.tb-bell{position:relative;width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--muted);cursor:pointer;border:1px solid var(--line-2);background:var(--surface)}
+.tb-bell:hover{color:var(--text)}
+.tb-bell .n{position:absolute;top:-5px;right:-5px;background:var(--accent);color:#1a0d02;font:700 10.5px var(--mono);border-radius:999px;padding:1px 6px;border:2px solid var(--bg-2)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+.kbd{font:11px var(--mono);border:1px solid var(--line-2);border-bottom-width:2px;padding:2px 7px;border-radius:6px;color:var(--muted);background:var(--bg-2)}
+
+/* ---------- page / cards ---------- */
+.page{flex:1;min-height:0;padding:24px 32px 28px;overflow:hidden;display:flex;flex-direction:column}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;min-height:0;display:flex;flex-direction:column}
+.lab{font-size:11.5px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--faint);display:flex;align-items:center;gap:8px;margin:0 0 14px}
+.lab .r{margin-left:auto;display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:.2px;font-weight:500}
+.hint{font-size:12.5px;color:var(--faint);line-height:1.45}
+
+/* ---------- buttons / chips / inputs ---------- */
+.db{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font-family:var(--ui);font-size:14px;font-weight:600;padding:10px 17px;border-radius:11px;background:var(--accent);color:#1a0d02;letter-spacing:.2px;white-space:nowrap;transition:filter .15s,transform .1s}
+.db:hover{filter:brightness(1.08)}.db:active{transform:scale(.98)}
+.db.soft{background:var(--surface-2);color:var(--text);border:1px solid var(--line-2)}.db.soft:hover{background:var(--raise);filter:none}
+.db.line{background:transparent;color:var(--muted);border:1px solid var(--line-2);font-weight:500}.db.line:hover{color:var(--text);background:var(--surface);filter:none}
+.db.danger{background:var(--red-soft);color:var(--red);border:1px solid rgba(255,91,77,.3)}.db.danger:hover{background:rgba(255,91,77,.22);filter:none}
+/* позитивное подтверждение («завершено», «обслужено») — зелёная, а не тревожная/акцентная */
+.db.good{background:var(--price);color:#052b16}.db.good:hover{filter:brightness(1.08)}
+.db.sm{padding:7px 12px;font-size:13px;border-radius:9px}
+.db.full{width:100%}
+.db:disabled{opacity:.45;cursor:default;pointer-events:none}
+.ib{width:36px;height:36px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid var(--line-2);background:var(--surface);color:var(--muted);cursor:pointer}
+.ib:hover{color:var(--text);background:var(--surface-2)}
+.ib.danger:hover{color:var(--red);border-color:rgba(255,91,77,.4);background:var(--red-soft)}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--muted);font-family:var(--ui);font-size:13.5px;font-weight:500;cursor:pointer;white-space:nowrap}
+.chip:hover{color:var(--text);background:var(--surface-2)}
+.chip.on{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent);font-weight:600}
+.chip .n{font-family:var(--mono);font-size:11.5px;opacity:.85}
+.inp,.sel,textarea.inp{background:var(--bg);border:1px solid var(--line-2);border-radius:11px;padding:10px 14px;color:var(--text);font-family:var(--ui);font-size:14.5px;width:100%;outline:none}
+/* поле, которое ведёт не мастер (остаток цвета из катушек принтера) — видно, но не правится */
+.inp:disabled{color:var(--faint);background:transparent;border-style:dashed;cursor:default}
+.inp:focus,.sel:focus,textarea.inp:focus{border-color:var(--accent-line)}
+.inp::placeholder{color:var(--faint)}
+.sel{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--faint) 50%),linear-gradient(135deg,var(--faint) 50%,transparent 50%);background-position:calc(100% - 19px) 50%,calc(100% - 14px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:36px}
+.f-lab{font-size:12px;font-weight:600;color:var(--muted);margin:0 2px 6px;display:block}
+.frow{display:flex;gap:12px}.frow>*{flex:1;min-width:0}
+.fgap{display:flex;flex-direction:column;gap:14px}
+
+/* ---------- status badge ---------- */
+.stb{display:inline-flex;align-items:center;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.5px;padding:4px 9px;border-radius:7px;text-transform:uppercase;white-space:nowrap}
+.stb.gray{background:var(--raise);color:var(--muted)}
+.stb.amber{background:var(--amber-soft);color:var(--amber)}
+.stb.violet{background:var(--violet-soft);color:var(--violet)}
+.stb.green{background:var(--price-soft);color:var(--price)}
+.stb.red{background:var(--red-soft);color:var(--red)}
+.stb.blue{background:var(--blue-soft);color:var(--blue)}
+
+/* ---------- пульт grid ---------- */
+.pult{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:590px minmax(0,1fr);gap:22px;height:100%;min-height:0}
+.pu-printer{grid-column:1/5;grid-row:1/3}
+.pu-att{grid-column:5/8}
+.pu-rev{grid-column:8/11}
+.pu-events{grid-column:11/13;grid-row:1/3}
+.pu-queue{grid-column:5/8;grid-row:2}
+.pu-tasks{grid-column:8/11;grid-row:2}
+/* Камера пульта — фиксированная рамка 16/9, картинка внутри показывается целиком (contain),
+   без обрезки. Раньше рамка тянулась на всю высоту карточки и cover срезал бока кадра. */
+.pu-printer .cam{flex:0 0 auto;aspect-ratio:16/9;min-height:0}
+.att-row{display:flex;align-items:center;gap:18px;padding:20px 18px;border-radius:13px;cursor:pointer;border:1px solid transparent}
+.att-row:hover{background:var(--surface-2);border-color:var(--line-2)}
+.att-row+.att-row{margin-top:10px}
+.att-row .num{font-family:var(--mono);font-size:44px;font-weight:700;line-height:1;min-width:64px;text-align:center}
+.att-row .tt{font-size:16px;font-weight:600}
+.att-row .ds{font-size:13px;color:var(--faint);margin-top:3px}
+.att-row .go{margin-left:auto;color:var(--faint)}
+.cam{position:relative;width:100%;aspect-ratio:16/9;border-radius:13px;overflow:hidden;background:repeating-linear-gradient(135deg,#10161d 0 14px,#131a22 14px 28px);border:1px solid var(--line-2);flex:0 0 auto}
+.cam .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--faint);font-family:var(--mono);font-size:12.5px;letter-spacing:.6px}
+.cam .ovl{position:absolute;left:14px;top:12px;display:flex;gap:8px}
+.cam .ovr{position:absolute;right:14px;top:12px}
+.cam .ovb{position:absolute;right:14px;bottom:12px}
+.tag{display:inline-flex;align-items:center;gap:7px;background:rgba(6,9,12,.72);backdrop-filter:blur(4px);border:1px solid var(--line-2);border-radius:8px;padding:4px 10px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.tag.live{color:#ff6b6b;border-color:rgba(255,91,77,.4)}
+.tag.live i{width:7px;height:7px;border-radius:50%;background:#ff5b4d;animation:pulse 1.2s infinite}
+.pbar{height:9px;border-radius:5px;background:var(--bg);overflow:hidden;position:relative}
+.pbar i{position:absolute;inset:0 auto 0 0;border-radius:5px;background:linear-gradient(90deg,#ff9a3d,var(--accent))}
+.tele{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px}
+.tele .cell{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+.tele .k{font-size:11px;color:var(--faint);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.tele .v{font-family:var(--mono);font-size:21px;font-weight:700;margin-top:4px}
+.tele .v span{font-size:12px;color:var(--faint);font-weight:500}
+.meta-line{display:flex;gap:22px;font-size:13.5px;color:var(--muted);flex-wrap:wrap}
+.meta-line b{color:var(--text);font-family:var(--mono);font-weight:600}
+.pctl{display:flex;gap:10px;margin-top:auto;padding-top:18px}
+/* Ручное управление принтером (прогрев/оси/вентиляторы) */
+.ctl-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:5px 0}
+.ctl-k{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);min-width:0}
+.ctl-btns{display:flex;gap:6px;flex:0 0 auto}
+/* Ряд «подпись сверху, кнопки переносятся ниже» — для узкой колонки «Печати», где профили
+   прогрева, Z-offset и проценты в одну строку с подписью не помещаются. */
+.ctl-stack{padding:6px 0}
+.ctl-stack>.ctl-k{margin-bottom:6px;flex-wrap:wrap}
+.ctl-stack>.ctl-btns{flex-wrap:wrap;flex:1 1 auto}
+.ctl-stack .inp{width:84px;padding:6px 10px}
+.pctl.wrap{flex-wrap:wrap}
+.pctl.wrap>*{flex:1 1 110px}
+.pctl.tight{margin-top:0;padding-top:8px}
+.ctl-jog{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0 4px}
+.ctl-jog>*{justify-content:center}
+.qrow{display:flex;align-items:center;gap:14px;padding:12px 10px;border-radius:11px;cursor:pointer}
+.qrow:hover{background:var(--surface-2)}
+.qrow .pos{font-family:var(--mono);font-size:19px;font-weight:700;color:var(--faint);width:30px;text-align:center;flex:0 0 auto}
+.qrow img{width:44px;height:44px;border-radius:9px;object-fit:cover;background:var(--bg)}
+.qrow .nm{font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.qrow .ds{font-size:12.5px;color:var(--faint);margin-top:2px}
+.qrow .arr{margin-left:auto;display:flex;flex-direction:column;gap:2px}
+.qrow .arr button{width:26px;height:22px;border:1px solid var(--line-2);background:var(--surface);color:var(--muted);border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.qrow .arr button:hover{color:var(--accent)}
+.ev{display:flex;gap:12px;padding:11px 2px;border-bottom:1px solid var(--line);cursor:pointer;border-radius:8px}
+.ev:hover{background:var(--surface-2)}
+.ev:last-child{border-bottom:0}
+.ev .edot{width:8px;height:8px;border-radius:50%;margin-top:7px;flex:0 0 auto}
+.ev .et{font-size:13.5px;font-weight:600;line-height:1.35}
+.ev .es{font-size:12.5px;color:var(--faint);margin-top:2px;line-height:1.35}
+.ev .tm{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--faint);flex:0 0 auto}
+.task{display:flex;align-items:flex-start;gap:12px;padding:11px 8px;border-radius:10px}
+.task:hover{background:var(--surface-2)}
+.task .cb{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line-2);background:var(--bg);cursor:pointer;flex:0 0 auto;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#1a0d02}
+.task.done .cb{background:var(--price);border-color:var(--price)}
+.task .tt{font-size:14px;font-weight:500}
+.task.done .tt{text-decoration:line-through;color:var(--faint)}
+.task .dd{font-size:12px;margin-top:2px;color:var(--faint)}
+.task .dd.red{color:var(--red)}.task .dd.hot{color:var(--amber)}
+.kpi2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kpi2 .cell{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi2 .k{font-size:11.5px;color:var(--faint);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.kpi2 .v{font-family:var(--mono);font-size:24px;font-weight:700;margin-top:5px}
+.kpi2 .s{font-size:12px;color:var(--faint);margin-top:2px}
+
+/* ---------- master-detail split ---------- */
+.split{display:flex;gap:22px;height:100%;min-height:0}
+.ms{width:1130px;flex:0 0 auto;display:flex;flex-direction:column;min-height:0}
+.ms-tools{display:flex;gap:10px;margin-bottom:14px;align-items:center}
+.ms-chips{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.det{flex:1;min-width:0;display:flex;flex-direction:column;min-height:0}
+
+/* ---------- table ---------- */
+.twrap{flex:1;min-height:0;overflow-y:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th{position:sticky;top:0;z-index:2;background:var(--surface-2);font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--faint);text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-2);cursor:pointer;user-select:none;white-space:nowrap}
+.tbl th:hover{color:var(--muted)}
+.tbl th .sa{color:var(--accent);margin-left:4px}
+.tbl td{padding:9px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+.tbl tr.row{cursor:pointer}
+.tbl tr.row:hover td{background:var(--surface-2)}
+.tbl tr.row.sel td{background:var(--surface-2)}
+.tbl tr.row.sel td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+.tbl img.pv{width:42px;height:42px;border-radius:9px;object-fit:cover;background:var(--bg);display:block}
+.tbl .oname{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px}
+.tbl .faint{color:var(--faint)}
+.msg-pill{display:inline-flex;align-items:center;justify-content:center;min-width:19px;height:19px;padding:0 6px;background:var(--blue);color:#fff;font:700 11px var(--ui);border-radius:999px;flex-shrink:0;line-height:1}
+
+/* ---------- order detail ---------- */
+.od{flex:1;min-height:0;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.od-head{display:flex;align-items:center;gap:18px;padding:20px 26px;border-bottom:1px solid var(--line);background:var(--surface-2);flex:0 0 auto}
+.od-head .tt{font-size:21px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.od-head .tt .id{color:var(--faint);font-family:var(--mono);font-weight:600;margin-right:10px}
+.od-head .sub{font-size:13px;color:var(--faint);margin-top:3px}
+.od-head .price{font-family:var(--mono);font-size:30px;font-weight:700;color:var(--price);white-space:nowrap}
+.od-body{flex:1;min-height:0;display:flex}
+.od-main{flex:1;min-width:0;overflow-y:auto;padding:24px 26px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-content:start}
+.od-chat{width:600px;flex:0 0 auto;border-left:1px solid var(--line);display:flex;flex-direction:column;background:var(--bg-2)}
+.sec{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+.sec .lab{margin-bottom:12px}
+.sec.span2{grid-column:1/3}
+.kv{display:flex;justify-content:space-between;gap-row:6px;font-size:14px;padding:5px 0}
+.kv .k{color:var(--muted)}.kv .v{font-weight:600;text-align:right}.kv .v.mono{font-family:var(--mono)}
+.bd-row{display:flex;justify-content:space-between;font-size:13.5px;padding:5px 0;color:var(--muted)}
+.bd-row b{font-family:var(--mono);color:var(--text);font-weight:600}
+.bd-row.tot{border-top:1px solid var(--line-2);margin-top:6px;padding-top:10px;color:var(--text);font-weight:600}
+.bd-row.tot b{color:var(--price);font-size:16px}
+.od-preview{width:100%;border-radius:11px;object-fit:cover;aspect-ratio:16/10;background:var(--surface-2);cursor:zoom-in}
+/* 3D-просмотр заказа (B1 для мастера): кнопка-оверлей на превью + полноэкранный вьюер */
+.od-preview-wrap{position:relative}
+.view3d-btn{position:absolute;right:10px;bottom:10px;display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;border:1px solid var(--line-2);background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(6px);color:var(--text);font:600 12.5px var(--ui);cursor:pointer}
+.view3d-btn:hover{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent)}
+.v3d-overlay{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;background:rgba(4,7,11,.78);padding:32px}
+.v3d-box{width:min(920px,92vw);height:min(680px,88vh);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line-2);border-radius:16px;overflow:hidden}
+.v3d-stage{position:relative;flex:1;min-height:0;background:radial-gradient(120% 120% at 50% 30%,var(--surface-2),var(--bg-2));touch-action:none}
+.v3d-stage canvas{display:block;width:100%;height:100%}
+.v3d-dim{position:absolute;left:12px;top:12px;font:600 12px var(--mono);color:var(--muted);background:color-mix(in srgb,var(--bg) 60%,transparent);border-radius:8px;padding:3px 9px}
+.v3d-wait{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+.v3d-bar{flex:0 0 auto;display:flex;align-items:center;gap:9px;padding:12px 16px;border-top:1px solid var(--line)}
+.v3d-bar .db.on{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent)}
+.v3d-fallback{margin:auto;text-align:center;padding:40px}
+.stchips{display:flex;gap:8px;flex-wrap:wrap}
+.warn{background:var(--amber-soft);border:1px solid rgba(255,176,32,.3);color:var(--amber);border-radius:11px;padding:10px 14px;font-size:13px;display:flex;gap:9px;align-items:flex-start}
+.okay{background:var(--price-soft);border:1px solid rgba(45,212,126,.3);color:var(--price);border-radius:11px;padding:10px 14px;font-size:13px}
+.cmp{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;background:var(--surface-2);border-radius:11px;padding:13px 16px;font-family:var(--mono);font-size:13.5px}
+.cmp .to{color:var(--faint)}
+.chat-h{padding:16px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.chat-h .nm{font-weight:700;font-size:15px}
+.chat-h .st{font-size:12px;color:var(--faint)}
+.chat-msgs{flex:1;min-height:0;overflow-y:auto;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.bub{max-width:82%;padding:10px 14px;border-radius:13px;background:var(--surface-2);font-size:14px;line-height:1.45;align-self:flex-start}
+.bub.me{background:var(--accent-soft);border:1px solid var(--accent-line);align-self:flex-end}
+.bub .bt{font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:5px;text-align:right}
+.chat-in{flex:0 0 auto;padding:16px 22px;border-top:1px solid var(--line);display:flex;gap:10px;background:var(--bg-2)}
+.chat-sep{align-self:center;background:none;border:0;cursor:pointer;font-family:var(--mono);font-size:10.5px;color:var(--faint);padding:2px 6px}.chat-sep:hover{color:var(--accent)}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--raise);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--accent);flex:0 0 auto}
+.stars{display:flex;gap:3px;color:var(--amber)}
+.menu{position:absolute;top:64px;right:26px;background:var(--raise);border:1px solid var(--line-2);border-radius:13px;padding:7px;min-width:250px;z-index:30;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.menu button{display:flex;align-items:center;gap:11px;width:100%;background:none;border:0;color:var(--text);font-family:var(--ui);font-size:14px;padding:10px 13px;border-radius:9px;cursor:pointer;text-align:left}
+.menu button:hover{background:var(--surface-2)}
+.menu button.danger{color:var(--red)}
+.menu hr{border:0;border-top:1px solid var(--line-2);margin:6px 4px}
+
+/* ---------- drawer / modal / palette / toasts ---------- */
+.dim{position:absolute;inset:0;background:rgba(4,6,9,.62);z-index:40;animation:fadein .2s}
+@keyframes fadein{from{opacity:0}}
+.drawer{position:absolute;top:0;right:0;bottom:0;width:640px;background:var(--surface);border-left:1px solid var(--line-2);z-index:41;display:flex;flex-direction:column;box-shadow:-40px 0 90px rgba(0,0,0,.5);animation:slidein .22s ease-out}
+@keyframes slidein{from{transform:translateX(60px);opacity:0}}
+.dw-h{display:flex;align-items:center;gap:14px;padding:22px 26px;border-bottom:1px solid var(--line);flex:0 0 auto}
+.dw-h .tt{font-size:18px;font-weight:700}
+.dw-h .ds{font-size:12.5px;color:var(--faint);margin-top:2px}
+.dw-b{flex:1;min-height:0;overflow-y:auto;padding:24px 26px}
+.dw-f{flex:0 0 auto;padding:18px 26px;border-top:1px solid var(--line);display:flex;gap:10px;background:var(--bg-2)}
+.modal{position:absolute;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:rgba(4,6,9,.62);animation:fadein .15s}
+/* color задан явно: модалка рендерится в .viewport ВНЕ .app (main.jsx), цвет темы не
+   наследуется — заголовок .mt был чёрным на тёмном фоне (фидбэк 01.08) */
+.modal .mbox{width:470px;background:var(--raise);border:1px solid var(--line-2);border-radius:16px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.6);color:var(--text)}
+.mbox .mt{font-size:17px;font-weight:700;margin-bottom:8px}
+.mbox .mx{font-size:14px;color:var(--muted);line-height:1.5;margin-bottom:22px}
+.mbox .mrow{display:flex;gap:10px;justify-content:flex-end}
+.pal{position:absolute;inset:0;z-index:55;background:rgba(4,6,9,.66);display:flex;justify-content:center;padding-top:180px;animation:fadein .15s}
+.pal .pbox{width:820px;max-height:640px;background:var(--raise);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 40px 100px rgba(0,0,0,.65);height:fit-content}
+.pal input{background:none;border:0;outline:none;color:var(--text);font-family:var(--ui);font-size:18px;padding:20px 24px;border-bottom:1px solid var(--line);width:100%}
+.pal .plist{overflow-y:auto;padding:10px}
+.pal .pitem{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:11px;cursor:pointer;font-size:14.5px}
+.pal .pitem.on{background:var(--surface-2)}
+.pal .pitem .pk{font-size:11px;color:var(--faint);font-family:var(--mono);margin-left:auto;text-transform:uppercase;letter-spacing:.5px}
+.pal .pitem img{width:34px;height:34px;border-radius:8px;object-fit:cover}
+.toasts{position:absolute;right:30px;bottom:30px;z-index:60;display:flex;flex-direction:column;gap:10px;width:430px}
+.toast{background:var(--raise);border:1px solid var(--line-2);padding:15px 19px;border-radius:14px;display:flex;gap:14px;align-items:center;box-shadow:0 22px 55px rgba(0,0,0,.55);animation:toastin .25s ease-out;font-size:14px}
+@keyframes toastin{from{transform:translateY(14px);opacity:0}}
+.toast .act{margin-left:auto;color:var(--accent);font-weight:700;cursor:pointer;white-space:nowrap;background:none;border:0;font-family:var(--ui);font-size:14px}
+.toast .act:hover{text-decoration:underline}
+.toast.ok{border-color:rgba(45,212,126,.35)}
+.toast.warn2{border-color:rgba(255,176,32,.4)}
+.toast.err{border-color:rgba(255,91,77,.45);background:linear-gradient(0deg,var(--red-soft),var(--red-soft)),var(--raise)}
+
+/* ---------- stub ---------- */
+.stub{margin:auto;max-width:760px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.stub .big{font-size:26px;font-weight:700}
+.stub .note{color:var(--muted);font-size:15px;line-height:1.6}
+.stub .plan{background:var(--surface);border:1px dashed var(--line-2);border-radius:14px;padding:18px 26px;color:var(--faint);font-size:13.5px;text-align:left;line-height:1.9;font-family:var(--mono)}
+
+/* ---------- печать ---------- */
+.prn{display:grid;grid-template-columns:9fr 6fr 5fr;gap:22px;height:100%;min-height:0}
+.prn-col{display:flex;flex-direction:column;gap:20px;min-height:0;overflow-y:auto;padding-right:2px}
+.prn-col::-webkit-scrollbar{width:8px}
+.svc{display:flex;align-items:center;gap:13px;padding:12px 8px;border-radius:11px}
+.svc:hover{background:var(--surface-2)}
+.svc .sdot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+.svc .snm{font-size:14px;font-weight:600}
+.svc .sds{font-size:12px;color:var(--faint);font-family:var(--mono);margin-top:2px}
+.slotr{display:flex;align-items:center;gap:13px;padding:11px 8px;border-radius:11px}
+.slotr .sc{width:26px;height:26px;border-radius:50%;border:2px solid var(--line-2);flex:0 0 auto}
+.slotr .nm{font-size:13.5px;font-weight:600}
+.slotr .gg{font-family:var(--mono);font-size:12px;color:var(--faint)}
+
+/* ---------- клиенты ---------- */
+.ckpi{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;padding:18px 26px;border-bottom:1px solid var(--line);background:var(--surface-2);flex:0 0 auto}
+.ckpi .cell{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:11px 14px}
+.ckpi .k{font-size:10.5px;color:var(--faint);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.ckpi .v{font-family:var(--mono);font-size:21px;font-weight:700;margin-top:3px}
+.avatar.lg{width:52px;height:52px;font-size:19px}
+.seg{display:inline-flex;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.5px;padding:3px 8px;border-radius:6px;text-transform:uppercase}
+.seg.vip{background:var(--amber-soft);color:var(--amber)}
+.seg.new2{background:var(--blue-soft);color:var(--blue)}
+.seg.rep{background:var(--price-soft);color:var(--price)}
+.seg.sleep{background:var(--violet-soft);color:var(--violet)}
+.seg.vis{background:var(--line-2);color:var(--muted)}
+.hrow{display:flex;align-items:center;gap:12px;padding:9px 2px;border-bottom:1px solid var(--line);font-size:13.5px}
+.hrow:last-child{border-bottom:0}
+.hrow .hd{font-family:var(--mono);color:var(--faint);font-size:12px;width:44px;flex:0 0 auto}
+.hrow .hv{font-family:var(--mono);font-weight:700;margin-left:auto}
+.fambox{display:flex;align-items:center;gap:10px;background:var(--violet-soft);border:1px solid rgba(169,139,255,.3);border-radius:11px;padding:10px 14px;font-size:13.5px;color:var(--violet)}
+.orow{display:flex;align-items:center;gap:12px;padding:10px 8px;border-radius:10px;cursor:pointer}
+.orow:hover{background:var(--surface-2)}
+.orow img{width:40px;height:40px;border-radius:8px;object-fit:cover}
+.orow .nm{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.orow .ds{font-size:12px;color:var(--faint);margin-top:1px}
+
+/* ---------- каталоги / аналитика ---------- */
+.col3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;height:100%;min-height:0}
+.colw{display:flex;flex-direction:column;gap:20px;min-height:0;overflow-y:auto;padding-right:2px}
+.swatch{width:26px;height:26px;border-radius:50%;border:2px solid var(--line-2);flex:0 0 auto}
+.crow2{display:flex;align-items:center;gap:13px;padding:10px 8px;border-radius:10px}
+.crow2:hover{background:var(--surface-2)}
+.kpi4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.kpi4 .card .v{font-family:var(--mono);font-size:34px;font-weight:700;margin-top:6px}
+.kpi4 .card .s{font-size:12.5px;color:var(--faint);margin-top:4px}
+.brow{display:flex;align-items:center;gap:12px;padding:7px 0;font-size:13.5px}
+.brow .bl{width:150px;flex:0 0 auto;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brow .bb{flex:1;height:16px;background:var(--bg);border-radius:5px;overflow:hidden;position:relative}
+.brow .bb i{position:absolute;inset:0 auto 0 0;border-radius:5px;background:var(--accent)}
+.brow .bv{width:70px;text-align:right;font-family:var(--mono);font-weight:600;flex:0 0 auto}
+.sw{position:relative;width:42px;height:24px;border-radius:999px;background:var(--raise);border:1px solid var(--line-2);cursor:pointer;flex:0 0 auto;transition:background .15s}
+.sw i{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:var(--muted);transition:left .15s,background .15s}
+.sw.on{background:var(--accent-soft);border-color:var(--accent-line)}
+.sw.on i{left:20px;background:var(--accent)}
+.togrow{display:flex;align-items:center;gap:13px;padding:12px 4px;border-bottom:1px solid var(--line);font-size:14px}
+.togrow:last-child{border-bottom:0}
+.togrow .ds{font-size:12px;color:var(--faint);margin-top:2px}
+input[type=range].rng{width:100%;accent-color:var(--accent);height:26px}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;align-content:start}
+.mcard{background:var(--bg);border:1px solid var(--line);border-radius:13px;padding:12px;display:flex;flex-direction:column;gap:9px}
+.mcard img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:9px;background:var(--surface-2)}
+.mcard .nm{font-size:13.5px;font-weight:600;line-height:1.3}
+.mcard .ds{font-size:11.5px;color:var(--faint);font-family:var(--mono)}
+.setrow{display:flex;align-items:center;gap:10px;padding:8px 0}
+.setrow .sl{flex:1;font-size:13.5px;color:var(--muted)}
+.setrow input{width:150px;flex:0 0 auto;text-align:right;font-family:var(--mono)}
+.setrow .ib{width:34px;height:34px}
+.wallwrap{position:relative;flex:1;min-height:0;background:var(--bg);border:1px solid var(--line-2);border-radius:13px;overflow:hidden;background-image:radial-gradient(circle,rgba(255,255,255,.09) 1.5px,transparent 1.5px);background-size:44px 44px;background-position:22px 22px}
+.wtile{position:absolute;border-radius:9px;border:1px solid;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;text-align:center;padding:6px;cursor:grab}
+.notif{border-left:3px solid var(--accent)}
+.dhead{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.pvar{display:flex;gap:8px;align-items:center;margin-bottom:16px;flex:0 0 auto}
+.pvar .pl2{font-size:11.5px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--faint);margin-right:4px}
+.sig{display:flex;align-items:center;gap:16px;padding:18px;border-radius:14px;cursor:pointer;background:color-mix(in srgb,var(--sc) 8%,transparent);border:1px solid color-mix(in srgb,var(--sc) 22%,transparent);transition:background .15s,transform .12s}
+.sig:hover{background:color-mix(in srgb,var(--sc) 14%,transparent);transform:translateX(2px)}
+.sig .sic{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--sc) 16%,transparent);color:var(--sc);flex:0 0 auto}
+.sig .num{font-family:var(--mono);font-size:38px;font-weight:700;line-height:1;color:var(--sc);min-width:46px;text-align:center;flex:0 0 auto}
+.sig .tt{font-size:15px;font-weight:600}
+.sig .ds{font-size:12px;color:var(--faint);margin-top:2px}
+.sig .go{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--sc);opacity:0;transition:opacity .15s;flex:0 0 auto}
+.sig:hover .go{opacity:1}
+.delta{display:inline-flex;align-items:center;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--price);background:var(--price-soft);border:1px solid rgba(45,212,126,.3);border-radius:8px;padding:4px 9px}
+.rstats{display:flex;align-items:stretch;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 0}
+.rstats>div{flex:1;padding:0 18px;min-width:0}
+.rstats>div+div{border-left:1px solid var(--line-2)}
+.rstats .k{font-size:10.5px;color:var(--faint);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.rstats .v{font-family:var(--mono);font-size:21px;font-weight:700;margin-top:4px;white-space:nowrap}
+.rstats .up{font-size:12px;color:var(--price);font-weight:600}
+/* grid-auto-rows:max-content обязателен. У .jcard стоит overflow:hidden, из-за чего его
+   минимальный авторазмер равен нулю: базовый размер auto-треков = 0, и сетка делила высоту
+   контейнера поровну между рядами (60 карточек → 12 рядов по 50px) — карточки обрезались,
+   а прокрутка не появлялась, потому что переполнения формально не было. В макете этого не
+   видно: там 4 карточки = один ряд, и высоты хватало. */
+.jgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-auto-rows:max-content;gap:16px;align-content:start}
+.jcard{background:var(--bg);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.jcard.wait{border-color:rgba(255,176,32,.4);box-shadow:0 0 0 1px rgba(255,176,32,.15)}
+/* min-height + flex:0 0 auto — против схлопывания. В макете у КАЖДОЙ печати есть фото, и
+   высоту задаёт сам <img>. В жизни у большинства записей фото нет (скрин стола появился
+   только сейчас), внутри .med остаются одни абсолютные плашки, собственная высота = 0 —
+   и ряды сетки сжимались до 50px, обрезая карточку и убивая прокрутку. */
+.jcard .med{position:relative;aspect-ratio:16/10;background:var(--surface-2);min-height:168px;flex:0 0 auto}
+.jcard .med img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
+.jcard .med-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--faint);font-family:var(--mono);font-size:11px}
+.jcard .med .shot{position:absolute;left:10px;top:9px}
+.jcard .med .tlb{position:absolute;right:10px;bottom:9px;display:inline-flex;align-items:center;gap:7px;background:rgba(6,9,12,.78);backdrop-filter:blur(4px);border:1px solid rgba(169,139,255,.45);color:var(--violet);border-radius:8px;padding:5px 11px;font:600 11.5px var(--mono);cursor:pointer}
+.jcard .med .tlb:hover{background:rgba(169,139,255,.22)}
+.jcard .med .res{position:absolute;right:10px;top:9px}
+.jcard .bd{padding:13px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.jcard .nm{font-size:14px;font-weight:600;line-height:1.3}
+.jcard .mt{font-size:12px;color:var(--faint);font-family:var(--mono)}
+.jcard .act{display:flex;gap:8px;align-items:center;margin-top:auto;padding-top:8px}
+.ev.hot{background:var(--accent-soft);border-radius:10px;box-shadow:inset 3px 0 0 var(--accent);animation:toastin .35s ease-out}
+.bulkbar{display:flex;gap:10px;align-items:center;background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:12px;padding:8px 8px 8px 16px;margin-bottom:14px;font-size:14px}
+.bulkbar b{font-family:var(--mono)}
+.aud{display:flex;gap:12px;padding:7px 0;font-size:13px;border-bottom:1px solid var(--line);align-items:baseline}
+.aud:last-child{border-bottom:0}
+.aud .at{font-family:var(--mono);font-size:11.5px;color:var(--faint);width:44px;flex:0 0 auto}
+.aud .ab{margin-left:auto;font-size:11px;color:var(--faint);font-family:var(--mono);flex:0 0 auto}
+.cam .ovprog{position:absolute;left:16px;right:16px;bottom:14px;background:rgba(6,9,12,.78);backdrop-filter:blur(6px);border:1px solid var(--line-2);border-radius:12px;padding:12px 16px}
+.stile{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 20px;display:flex;align-items:center;gap:16px;cursor:pointer;min-width:0}
+.stile:hover{background:var(--surface-2)}
+.stile .num{font-family:var(--mono);font-size:34px;font-weight:700;line-height:1;flex:0 0 auto}
+.stile .tt{font-size:14px;font-weight:600;line-height:1.25}
+.stile .ds{font-size:11.5px;color:var(--faint);margin-top:2px}
+
+/* ============================================================================
+   Дополнения к макету хендоффа: части, которых в прототипе не было — он жил на
+   моках и не знал ни загрузки, ни ошибок, ни пустых списков с сервера.
+   ============================================================================ */
+
+/* --- загрузка и ошибки --- */
+.ldr{display:flex;align-items:center;gap:11px;padding:38px 4px;color:var(--faint);font-size:14px}
+.spin{width:16px;height:16px;border:2px solid var(--raise);border-top-color:var(--accent);border-radius:50%;display:inline-block;animation:sp .7s linear infinite;flex:0 0 auto}
+.spin.sm{width:13px;height:13px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.errbox{display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--red-soft);border:1px solid rgba(255,91,77,.3);border-radius:13px;margin:8px 0}
+
+/* Демо-режим: без баннера админка молча показывает выдуманные данные как настоящие. */
+.mockbar{flex:0 0 auto;display:flex;align-items:center;gap:9px;margin:0 32px;padding:9px 14px;background:var(--amber-soft);border:1px solid rgba(255,176,32,.32);border-radius:11px;color:var(--amber);font-size:13px}
+.mockbar b{color:var(--text)}
+
+/* --- панель списка ---
+   Своих .ms-top/.ms-act/.srch/.chips больше нет: панель над списком — .ms-tools макета,
+   поиск — .tb-search, чипы — .ms-chips + .chip .n. */
+.chk{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);cursor:pointer}
+.wrap{flex-wrap:wrap}
+
+/* --- деталь --- */
+
+
+
+
+
+.pickone{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--faint);font-size:14.5px}
+.kbdhint{display:flex;align-items:center;gap:5px;font-size:12.5px;color:var(--faint)}
+
+/* --- карточка заказа --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.photos{display:flex;gap:9px;flex-wrap:wrap;margin-top:9px}
+.photos img{width:88px;height:88px;object-fit:cover;border-radius:10px;cursor:zoom-in;background:var(--raise)}
+
+
+
+
+
+/* --- чат: вложения --- */
+.bimg{max-width:100%;border-radius:10px;display:block;margin-bottom:6px;cursor:zoom-in}
+
+/* --- чат: цитата ответа/реакции, крупный эмодзи и галочка прочтения --- */
+/* Цитата — на что отвечают. Реакция приходит отдельным сообщением-эмодзи, и без неё это
+   было бы сердечко в пустоте. Полоска слева наследует цвет текста пузыря, поэтому одинаково
+   читается и на акцентной заливке своих, и на сером у клиента. */
+.bq{border-left:2px solid currentColor;opacity:.6;padding-left:8px;margin-bottom:5px;
+  font-size:11.5px;line-height:1.35;max-height:32px;overflow:hidden}
+.bemoji{font-size:30px;line-height:1.15}
+/* ✓ отправлено · ✓✓ прочитано. Отметка НАША (Bot API прочтение не сообщает): ставится, когда
+   клиент открыл переписку в приложении либо ответил/поставил реакцию из Telegram. */
+.bub .bt .rd{margin-left:6px;letter-spacing:-2px}
+.bub .bt .rd.on{color:var(--accent)}
+
+/* --- очередь и телеметрия: общие для Пульта и Печати (в прототипе были скопированы) --- */
+
+
+
+
+
+
+
+
+
+
+
+.tele-empty{padding:16px;color:var(--faint);font-size:13.5px;text-align:center}
+.pprog{display:flex;flex-direction:column;gap:8px}
+.pph{display:flex;align-items:baseline;gap:11px}
+.pph .big{font-size:26px;font-weight:700;color:var(--text)}
+.left{font-size:13px;color:var(--muted)}
+.pfn{font-size:12px;color:var(--faint);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* --- кнопки: вариант, которого в прототипе не было ---
+   Модификатора .acc нет: базовая .db макета и так акцентная. Отключённое состояние — .db:disabled. */
+.ib.sm{width:26px;height:26px}
+
+/* ============================================================================
+   Адаптив. Идеал — 3440x1440 (21:9), рабочий минимум — 1920x1080.
+   Медиазапросов в прототипе не было ни одного: он жил на холсте фиксированного
+   размера, который целиком масштабировался трансформом. Здесь окно тянется
+   по-настоящему, поэтому раскладка перестраивается по трём порогам.
+   ============================================================================ */
+
+/* Ширину списка задаёт экран через --ms-w, но она всегда уступает место детали. */
+.ms{width:var(--ms-w,1130px);max-width:56%}
+
+/* Три панели (список + карточка + чат) помещаются только на очень широком экране.
+   Ниже сперва ужимается список, потом карточка становится одноколоночной, и лишь
+   затем чат уходит вниз: он нужен мастеру постоянно и прятать его дороже всего. */
+@media (max-width:2400px){
+  .ms{max-width:46%}
+  .od-chat{width:460px}
+}
+
+@media (max-width:2000px){
+  .sb{width:248px}
+  .ms{max-width:40%}
+  .od-main{grid-template-columns:1fr}
+  /* иначе `grid-column:1/3` у широких секций создаёт неявную вторую колонку
+     и карточка снова становится двухколоночной вопреки медиазапросу */
+  .od-main .sec.span2{grid-column:auto}
+  .od-chat{width:360px}
+  .cl-chat{width:360px}
+  .page{padding:18px 22px 22px}
+  .tb{padding:0 22px;gap:14px}
+  .mockbar{margin:0 22px}
+}
+
+/* Рабочий минимум: на карточку остаётся меньше ~330px — дальше ужимать нечего,
+   поэтому master-detail становится вертикальным, а чат — панелью под карточкой. */
+@media (max-width:1600px){
+  .sb{width:212px}
+  .sb-item{font-size:13.5px;padding:9px 10px}
+  .ms{max-width:none;width:100%}
+  .split{flex-direction:column;overflow-y:auto;gap:16px}
+  .det{min-height:560px}
+  .od-body{flex-direction:column}
+  .od-main .sec.span2{grid-column:auto}
+  .od-chat,.cl-chat{width:100%;border-left:0;border-top:1px solid var(--line);max-height:420px}
+}
+
+/* ---------- раскладки экранов ----------
+   Сеток на три колонки в макете хватает (.col3/.colw), поэтому своих .pricing/.pcol нет. */
+.onecol{flex:1;min-height:0;display:flex;flex-direction:column}
+/* На 21:9 колонка в полную ширину выглядит пустой — в макете она ограничена по ширине. */
+.onecol.narrow{max-width:1400px;width:100%;margin:0 auto}
+
+/* Подсказка под курсором на графиках (Area, столбики по дням). Обёртка — точка отсчёта
+   для абсолютных крестовины/точки/подсказки; сами они pointer-events:none, иначе курсор
+   «наезжает» на подсказку и график мигает. */
+.chwrap{position:relative}
+.chcross{position:absolute;top:0;bottom:0;width:1px;background:var(--line-2);pointer-events:none}
+.chdot{position:absolute;width:9px;height:9px;border-radius:50%;margin:-4.5px 0 0 -4.5px;
+  box-shadow:0 0 0 3px var(--surface);pointer-events:none}
+.chtip{position:absolute;z-index:6;pointer-events:none;white-space:nowrap;display:flex;
+  align-items:baseline;gap:9px;background:var(--raise);border:1px solid var(--line-2);
+  border-radius:9px;padding:6px 10px;box-shadow:0 8px 22px rgba(0,0,0,.45)}
+.chtip .k{color:var(--faint);font-family:var(--mono);font-size:11px}
+.chtip b{font-family:var(--mono);font-size:13px;color:var(--text)}
+
+/* Дашборд — два ряда карточек разной ширины, как в макете, а не общий грид. */
+.dashrows{flex:1;min-height:0;display:flex;flex-direction:column;gap:20px;overflow-y:auto}
+.dash-r1,.dash-r2{display:grid;gap:20px;flex:1;min-height:0}
+.dash-r1{grid-template-columns:2fr 1fr 1fr}
+.dash-r2{grid-template-columns:1fr 1.2fr 1fr}
+@media (max-width:1700px){
+  /* Одна колонка — карточки встают друг под друга и в окно уже не помещаются. Ряды при этом
+     обязаны перестать делить высоту: с flex:1 они сжимались до ~50 px, содержимое карточек
+     вылезало наружу, а прокрутки не появлялось. Высоту задаёт grid-auto-rows, лишнее
+     прокручивает .dashrows. */
+  .dash-r1,.dash-r2{grid-template-columns:1fr;flex:0 0 auto;grid-auto-rows:minmax(300px,auto)}
+  .col3{grid-template-columns:1fr;height:auto;overflow-y:auto}
+}
+
+/* ---------- 16:9 экраны (макет рисовался под 21:9) ----------
+   На 1920×1080 верхний ряд Пульта в фиксированные 590px упирался в край экрана и обрезал
+   нижний ряд (очередь/задачи). Делаем ряды гибкими — они делят высоту поровну и не режутся.
+   То же для короткой высоты у ноутбуков. */
+@media (max-width:1920px){
+  .pult{grid-template-rows:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-height:900px){
+  .pult{grid-template-rows:minmax(0,1fr) minmax(0,1fr)}
+  .det{min-height:0}
+  .split{overflow-y:auto}
+}
+/* Пульт: карточки печати/событий тянутся на два ряда — при гибких рядах их содержимое
+   должно прокручиваться внутри, а не распирать сетку и вылезать за экран. */
+@media (max-width:1920px){
+  .pu-printer,.pu-events{overflow-y:auto}
+}
+
+/* ---------- простые списки ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- задачи ----------
+   Вид строки целиком задан макетом (.task/.task.done .cb/.task.done .tt) — здесь только срок. */
+.due{font-family:var(--mono);font-size:11px;color:var(--faint);background:var(--raise);padding:3px 7px;border-radius:6px;flex:0 0 auto}
+.due.hot{color:var(--amber);background:var(--amber-soft)}
+.due.red{color:var(--red);background:var(--red-soft)}
+
+/* ---------- активность (виджет Пульта) ---------- */
+
+
+
+
+
+
+/* ---------- KPI карточки клиента ---------- */
+
+
+
+
+
+/* ---------- сегменты клиента ---------- */
+
+
+/* ---------- таймлайн ---------- */
+
+
+
+
+
+
+
+
+/* ---------- чат клиента ---------- */
+.cl-chat{width:520px}
+
+
+/* Семьи собираются из .card/.card.notif/.lab/.chip макета — своих классов у экрана нет. */
+
+/* ---------- пластики ---------- */
+
+
+
+.cpick{width:38px;height:32px;padding:0;border:1px solid var(--line);border-radius:8px;background:var(--surface);cursor:pointer}
+
+/* ---------- коллекция ----------
+   Список категорий — .qrow макета; заглушка «фото нет» своя: в макете картинки моделей
+   всегда были, а с живых данных photo бывает пустым. */
+.mnoimg{width:100%;aspect-ratio:1;border-radius:9px;background:var(--raise);display:flex;align-items:center;justify-content:center;color:var(--faint)}
+
+/* ---------- дашборд ---------- */
+
+
+
+
+
+
+
+
+
+
+/* Журнал и план недели собраны из классов макета (.jcard/.med, .split/.ms/.card/.qrow) —
+   своих правил у них нет. */
+
+/* ---------- планировщик стены ---------- */
+
+
+
+.wtile:active{cursor:grabbing}
+.wx{position:absolute;top:2px;right:5px;font-style:normal;font-size:11px;color:var(--faint);cursor:pointer}
+.wx:hover{color:var(--red)}
+
+/* ---------- калькулятор ---------- */
+
+.stepper{display:flex;align-items:center;gap:5px}
+.stepper .inp{text-align:center}
+
+/* ---------- вкладки внутри окна (этап 4) ---------- */
+/* .tabhost занимает место прежнего .content: полоса вкладок сверху, экраны под ней.
+   Неактивные вкладки остаются в DOM (display:none) — иначе теряется состояние экрана,
+   ради сохранения которого вкладки и делались. */
+.tabhost{flex:1;min-width:0;display:flex;flex-direction:column;min-height:0}
+.tabhost>.content{flex:1;min-height:0}
+.tabbar{flex:0 0 auto;display:flex;align-items:stretch;gap:4px;padding:8px 14px 0;background:var(--bg-2);border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{display:flex;align-items:center;gap:9px;padding:8px 12px;border-radius:10px 10px 0 0;background:transparent;color:var(--muted);font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;border:1px solid transparent;border-bottom:0;max-width:230px}
+.tab:hover{background:var(--surface-2);color:var(--text)}
+.tab.on{background:var(--bg);color:var(--text);border-color:var(--line)}
+.tab .tt{overflow:hidden;text-overflow:ellipsis}
+.tab .x{border:0;background:none;color:var(--faint);font-size:12px;cursor:pointer;padding:0 2px;line-height:1;flex:0 0 auto}
+.tab .x:hover{color:var(--red)}
+.tabnew{flex:0 0 auto;align-self:center;width:28px;height:28px;margin-left:4px;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.tabnew:hover{color:var(--accent);border-color:var(--accent-line)}
+
+/* Личный вход в админку (app/desklogin.py): экран двери и подпись «кто работает» в сайдбаре. */
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.login-card{width:360px;max-width:100%;padding:26px 24px}
+.login-hint{color:var(--muted);font-size:13.5px;line-height:1.55;margin:0 0 16px}
+.login-code{width:100%;text-align:center;font-size:30px;letter-spacing:10px;padding:12px 0}
+.login-err{color:var(--red);font-size:13px;margin-top:10px}
+.login-foot{color:var(--faint);font-size:11.5px;line-height:1.5;margin:16px 0 0}
+.sb-me{display:flex;flex-direction:column;gap:2px;padding-bottom:4px}
+.sb-me-n{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sb-me-r{font-size:11.5px;color:var(--faint);display:flex;align-items:center;gap:8px}
+.sb-out{border:0;background:none;color:var(--faint);font-size:11.5px;cursor:pointer;padding:0;font-family:var(--ui);text-decoration:underline}
+.sb-out:hover{color:var(--red)}

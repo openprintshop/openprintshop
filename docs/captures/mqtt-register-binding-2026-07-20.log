@@ -1,0 +1,751 @@
+[15:35:06] CONNACK ptype=0x20 rc=0
+[15:35:08] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:35:08] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:35:12] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":849,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:35:18] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:35:18] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:35:22] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":850,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:35:27] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:35:27] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:35:28] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:35:29] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:35:31] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":851,"method":6000,"result":{"heater_bed":{"temperature":25}}}
+[15:35:39] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:35:39] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:35:49] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:35:49] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:35:53] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":852,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:35:57] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:35:57] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:35:59] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:35:59] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:36:09] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:36:09] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:36:19] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:36:19] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:36:27] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:36:27] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:36:29] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:36:29] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:36:30] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":853,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:36:32] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":854,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:36:33] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":855,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:36:34] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":856,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:36:36] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":857,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:36:37] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":858,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:36:38] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":859,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:36:39] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:36:39] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:36:39] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":860,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:36:40] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":861,"method":6000,"result":{"extruder":{"temperature":29}}}
+[15:36:41] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":862,"method":6000,"result":{"extruder":{"temperature":28}}}
+[15:36:49] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:36:49] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:36:57] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:36:57] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:36:59] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:36:59] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:37:09] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:37:09] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:37:09] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":863,"method":6000,"result":{"heater_bed":{"temperature":25}}}
+[15:37:19] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:37:19] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:37:27] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:37:27] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:37:29] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:37:29] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:37:39] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:37:39] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:37:45] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":864,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:37:49] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:37:49] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:37:57] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:37:57] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:37:59] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:37:59] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:38:09] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:38:09] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:38:19] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:38:19] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:38:26] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":865,"method":6000,"result":{"heater_bed":{"temperature":25}}}
+[15:38:27] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:38:27] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:38:29] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:38:29] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:38:39] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:38:39] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:38:46] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":866,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:38:49] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:38:49] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:38:57] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:38:57] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:38:59] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":867,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:38:59] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:39:00] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:39:10] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:39:10] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:39:11] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":868,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:39:18] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":869,"method":6000,"result":{"heater_bed":{"temperature":25}}}
+[15:39:21] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:39:21] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:39:27] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:39:27] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:39:31] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":870,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:39:32] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:39:32] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:39:40] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":871,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:39:43] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:39:43] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:39:54] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:39:54] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:39:54] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":872,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:39:57] elegoo/F01AKDEMO000000/0cli209e8a/api_request
+    {"type":"PING"}
+[15:39:57] elegoo/F01AKDEMO000000/0cli209e8a/api_response
+    {"type":"PONG"}
+[15:40:03] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":873,"method":6000,"result":{"heater_bed":{"temperature":25}}}
+[15:40:04] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:40:04] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:40:14] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:40:15] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:40:19] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":874,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:40:19] elegoo/F01AKDEMO000000/api_register
+    {"request_id":"0cliaa2497","client_id":"0cliaa2497"}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/register_response
+    {"client_id":"0cliaa2497","error":"ok"}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1036,"id":1}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":2005,"id":2}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1044,"params":{"storage_media":"local","offset":0,"limit":20},"id":3}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":4}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":1,"method":1036,"result":{"error_code":0,"history_task_list":[{"begin_time":1783771082,"end_time":1783773522,"task_id":"245f8405-5994-4898-850f-03dda99208cb","task_name":"ECC2_0.4_flowrate_0_Elegoo PETG Orange 3DFP _0.2_33m1s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_flowrate_0_Elegoo PETG Orange 3DFP _0.2_33m1s.gcode20260711195802"},{"begin_time":1783774723,"end_time":1783776783,"task_id":"9f8f5377-0009-4fdd-bb8e-f1e41a8307d2","task_name":"ECC2_0.4_flowrate_0_Elegoo PETG Orange _0.2_31m34s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_flowrate_0_Elegoo PETG Orange _0.2_31m34s.gcode20260711205844"},{"begin_time":1783780689,"end_time":1783781970,"task_id":"a4ff9102-bfeb-4538-8555-94a1264f8f63","task_name":"ECC2_0.4_dd_Elegoo PETG Orange _0.2_15m3s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_dd_Elegoo PETG Orange _0.2_15m3s.gcode20260711223809"},{"begin_time":1783784556,"end_time":1783785556,"task_id":"f8d459e6-081c-40c9-8ecc-e7072770c395","task_name":"ECC2_0.4_dd_Elegoo PETG Orange 1.05 _0.2_13m52s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_dd_Elegoo PETG Orange 1.05 _0.2_13m52s.gcode20260711234237"},{"begin_time":1783793604,"end_time":1783795715,"task_id":"6a1a37e2-7337-42e5-8180-566eef5119a5","task_name":"ECC2_0.4_Move Face24_Elegoo PETG Orange _0.2_33m28s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_Move Face24_Elegoo PETG Orange _0.2_33m28s.gcode20260712021324"},{"begin_time":1783803470,"end_time":1783805623,"task_id":"158b61a1-abcf-4a9d-b53d-bfefcbd7a6e0","task_name":"ECC2_0.4_Move Face24_Elegoo PETG Orange _0.2_34m18s.gcode","task_status":1,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783806433,"end_time":1783809524,"task_id":"230697dc-533f-4b0b-b469-cf2f9fd2f672","task_name":"ECC2_0.4_Fillet34_Elegoo PETG Orange _0.2_49m22s.gcode","task_status":1,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783850017,"end_time":1783874683,"task_id":"feb4408d-2132-44fe-8c38-eb11c4ba4f7f","task_name":"ECC2_0.4_philips-3000-add-hole_Weave-1_amp0p50_Kingroon PETG fixed _0.2_7h9m.gcode","task_status":1,"time_lapse_video_duration":15,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_philips-3000-add-hole_Weave-1_amp0p50_Kingroon PETG fixed _0.2_7h9m.gcode20260712175340"},{"begin_time":1783883203,"end_time":1783904028,"task_id":"ee1cba92-07db-4b2d-9d77-d0f326f0ab4d","task_name":"ECC2_0.4_philips-3000-add-hole_Weave-1_amp0p50_Kingroon PETG fixed _0.2_4h43m.gcode","task_status":1,"time_lapse_video_duration":15,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_philips-3000-add-hole_Weave-1_amp0p50_Kingroon PETG fixed _0.2_4h43m.gcode20260713030644"},{"begin_time":1783949143,"end_time":1783950377,"task_id":"3e3cec34-aef6-48a9-a7c1-c24990589236","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_25m56s.gcode","task_status":2,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783950944,"end_time":1783953049,"task_id":"afb02f34-9463-44c9-8017-e768784635b4","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_25m56s.gcode","task_status":1,"time_lapse_video_duration":5,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_25m56s.gcode20260713215544"},{"begin_time":1783953780,"end_time":1783954027,"task_id":"86940f6a-416f-42e8-a9ef-09449ce9547a","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_3h27m.gcode","task_status":2,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783954524,"end_time":1783954959,"task_id":"1f170afa-af6f-4a65-a5cf-a329f26b7512","task_name":"ECC2_0.4_20_Elegoo PLA Matte _0.2_40s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_20_Elegoo PLA Matte _0.2_40s.gcode20260713225525"},{"begin_time":1783955226,"end_time":1783955524,"task_id":"04bbee5e-5f44-45ca-afd0-3dd0e01765f4","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_3h27m.gcode","task_status":2,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783955582,"end_time":1783966949,"task_id":"116e6a95-7153-4ef4-bd0f-4395f1a8a3b4","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_3h27m.gcode","task_status":1,"time_lapse_video_duration":15,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_3h27m.gcode20260713231302"},{"begin_time":1783969119,"end_time":1783970976,"task_id":"d49f4003-4971-4439-8a2c-31cbb22da8a0","task_name":"ECC2_0.4_Koala AMS_80 Elegoo PETG _0.2_3h54m.gcode","task_status":2,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783971381,"end_time":1783987848,"task_id":"58d40cfd-d11d-46bd-93b8-c11f052f53ef","task_name":"ECC2_0.4_Koala AMS_80 Elegoo PETG _0.2_3h54m.gcode","task_status":1,"time_lapse_video_duration":12,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_Koala AMS_80 Elegoo PETG _0.2_3h54m.gcode20260714033622"},{"begin_time":1784014968,"end_time":1784015966,"ta
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":2,"method":2005,"result":{"canvas_info":{"active_canvas_id":0,"active_tray_id":-1,"auto_refill":false,"canvas_list":[{"canvas_id":0,"connected":1,"tray_list":[{"brand":"ELEGOO","filament_code":"0x0003","filament_color":"#A03BF7","filament_name":"PLA Silk","filament_type":"PLA","max_nozzle_temp":230,"min_nozzle_temp":190,"status":1,"tray_id":0},{"brand":"ELEGOO","filament_code":"0x0006","filament_color":"#09CC3A","filament_name":"PLA Matte","filament_type":"PLA","max_nozzle_temp":230,"min_nozzle_temp":190,"status":1,"tray_id":1},{"brand":"ELEGOO","filament_code":"0x0100","filament_color":"#F88D36","filament_name":"PETG","filament_type":"PETG","max_nozzle_temp":260,"min_nozzle_temp":230,"status":1,"tray_id":2},{"brand":"ELEGOO","filament_code":"0x0006","filament_color":"#D2C5A3","filament_name":"PLA Matte","filament_type":"PLA","max_nozzle_temp":230,"min_nozzle_temp":190,"status":1,"tray_id":3}]}]},"error_code":0}}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":3,"method":1044,"result":{"error_code":0,"file_list":[{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784503283,"filename":"ECC2_0.4_Hanger Rectangular (5)_Elegoo PLA Matte _0.12_1h9m.gcode","last_print_time":0,"layer":233,"print_time":4137,"size":9012919,"total_filament_used":24.31,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#E4BD68","name":"PLA","t":0},{"color":"#3F8E43","name":"PLA","t":1},{"color":"#000000","name":"PLA","t":2}],"create_time":1784488726,"filename":"ECC2_0.4_grogu_Boolean_Elegoo PLA Matte _0.2_1h25m.gcode","last_print_time":0,"layer":81,"print_time":5079,"size":5031400,"total_filament_used":23.6,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#000000","name":"PETG","t":0}],"create_time":1784469007,"filename":"ECC2_0.4_Tab Oper v7_80 Elegoo PETG _0.2_1h25m.gcode","last_print_time":0,"layer":40,"print_time":5079,"size":6030188,"total_filament_used":32.21,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#26A69A","name":"PETG","t":0}],"create_time":1784453592,"filename":"ECC2_0.4_nozzle_cleaner_Dots_amp0p24_80 Elegoo PETG _0.12_1h3m.gcode","last_print_time":0,"layer":125,"print_time":3792,"size":8557029,"total_filament_used":9.91,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#8000FF","name":"PLA","t":0}],"create_time":1784397018,"filename":"ECC2_0.4_Сборка_Elegoo PLA Silk _0.12_13h46m.gcode","last_print_time":0,"layer":449,"print_time":49535,"size":37464350,"total_filament_used":183.59,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#8000FF","name":"PLA","t":0}],"create_time":1784364576,"filename":"ECC2_0.4_Body1_Elegoo PLA Silk _0.12_1h44m.gcode","last_print_time":0,"layer":449,"print_time":6234,"size":4424892,"total_filament_used":20.9,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#E4BD68","name":"PLA","t":0}],"create_time":1784332006,"filename":"ECC2_0.4_kpbl底座_Elegoo PLA Matte _0.12_2h25m.gcode","last_print_time":0,"layer":404,"print_time":8712,"size":24123265,"total_filament_used":40.37,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#307FE2","name":"PLA","t":0}],"create_time":1784317528,"filename":"ECC2_0.4_4 Ring Gyro Fidget_Elegoo PLA Silk _0.2_1h7m.gcode","last_print_time":0,"layer":65,"print_time":4046,"size":7315044,"total_filament_used":13.74,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784307863,"filename":"ECC2_0.4_Bodyp_Elegoo PLA Silk _0.2_2h20m.gcode","last_print_time":0,"layer":230,"print_time":8403,"size":21433214,"total_filament_used":35.78,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#79FF79","name":"PLA","t":0}],"create_time":1784283949,"filename":"ECC2_0.4_Flexi Jellyfish V5 Small v3_Elegoo PLA Silk _0.2_2h54m.gcode","last_print_time":0,"layer":154,"print_time":10427,"size":19263424,"total_filament_used":35.75,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#DD934F","name":"PLA","t":0}],"create_time":1784219108,"filename":"ECC2_0.4_Camel (1)_Elegoo PLA Matte _0.12_5h18m.gcode","last_print_time":0,"layer":600,"print_time":19071,"size":25858731,"total_filament_used":92.88,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#DD934F","name":"PLA","t":0}],"create_time":1784189637,"filename":"ECC2_0.4_Camel (1)_Elegoo PLA Matte _0.12_5h55m.gcode","last_print_time":0,"layer":680,"print_time":21273,"size":28834423,"total_filament_used":93.67,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784160410,"filename":"ECC2_0.4_shang_Elegoo PLA Matte _0.2_2h21m.gcode","last_print_time":0,"layer":15,"print_time":8470,"size":12709217,"total_filament_used":36.5,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784150200,"filename":"ECC2_0.4_luosiluomu_Elegoo PLA Matte _0.2_2h10m.gcode","last_print_time":0,"layer":31,"print_time":7790,"size":12502883,"total_filament_used":26.41,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784142637,"filename":"ECC2_0.4_luosiluomu_Elegoo PLA Matte _0.2_1h54m.gcode","last_print_time":0,"layer":31,"print_time":6838,"size":10998655,"total_filament_used":23.26,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784134208,"filename":"ECC2_0.4_shang_Elegoo PLA Matte _0.2_1h49m.gcode","last_print_time":0,"layer":15,"print_time":6569,"size":9617494,"total_filament_used":30.21,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784129845,"filename":"ECC2_0.4_7pian_Elegoo PLA Matte _0.2_16m0s.gcode","last_print_time":0,"layer":10,"print_time":960,"size":1576250,"total_filament_used":3.69,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784122555,"filename":"ECC2_0.4_8pian_Elegoo PLA Matte _0.2_15m37s.gcode","last_print_time":0,"layer":9,"print_time":937,"size":1134711,"total_filament_used":3.82,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784115927,"filename":"ECC2_0.4_8pian_Elegoo PLA Matte _0.2_16m33s.gcode","last_print_time":0,"layer":9,"print_time":993,"size":1413134,"total_filament_used":3.86,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FFFFFF","name":"PLA","t":2}],"create_time":1784100595,"filename":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_5m50s.gcode","last_print_time":0,"layer":62,"print_time":350,"size":497331,"total_filament_used":1.25,"total_print_times":0,"type":"file"}],"offset":0,"total":237}}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":4,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":0,"temperature":28},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":0.0},"fan":{"speed":0.0},"heater_fan":{"speed":0.0}},"gcode_move":{"extruder":0.0,"speed":1500,"speed_mode":1,"x":5.0,"y":5.0,"z":-0.089948},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":""},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1044,"params":{"storage_media":"u-disk","dir":"/","offset":0,"limit":20},"id":5}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1001,"id":6}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":5,"method":1044,"result":{"error_code":1017}}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":6,"method":1001,"result":{"error_code":0,"hardware_version":"","hostname":"Centauri Carbon 2","ip":"192.168.1.50","machine_model":"Centauri Carbon 2","protocol_version":"1.0.0","sn":"F01AKDEMO000000","software_version":{"mcu_version":"00.00.00.00","ota_version":"02.01.00.00","soc_version":""}}}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1042,"id":7}
+[15:40:20] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":7,"method":1042,"result":{"error_code":0,"url":"http://192.168.1.50:8080/?action=stream"}}
+[15:40:25] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:40:25] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:40:26] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1029,"params":{"power":0},"id":8}
+[15:40:26] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":8,"method":1029,"result":{"error_code":0}}
+[15:40:26] elegoo/F01AKDEMO000000/api_status  <api_status 54b> {"id":875,"method":6000,"result":{"led":{"status":0}}}
+[15:40:27] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1029,"params":{"power":1},"id":9}
+[15:40:27] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":9,"method":1029,"result":{"error_code":0}}
+[15:40:27] elegoo/F01AKDEMO000000/api_status  <api_status 86b> {"id":876,"method":6000,"result":{"heater_bed":{"temperature":27},"led":{"status":1}}}
+[15:40:29] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1029,"params":{"power":0},"id":10}
+[15:40:29] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":10,"method":1029,"result":{"error_code":0}}
+[15:40:29] elegoo/F01AKDEMO000000/api_status  <api_status 54b> {"id":877,"method":6000,"result":{"led":{"status":0}}}
+[15:40:31] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1029,"params":{"power":1},"id":11}
+[15:40:31] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":11,"method":1029,"result":{"error_code":0}}
+[15:40:31] elegoo/F01AKDEMO000000/api_status  <api_status 54b> {"id":878,"method":6000,"result":{"led":{"status":1}}}
+[15:40:34] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":879,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:40:35] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:40:35] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:40:41] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":880,"method":6000,"result":{"heater_bed":{"temperature":25}}}
+[15:40:45] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:40:45] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:40:45] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"fan":255},"id":12}
+[15:40:45] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":12,"method":1030,"result":{"error_code":0}}
+[15:40:45] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":881,"method":6000,"result":{"fans":{"fan":{"speed":255.0}}}}
+[15:40:47] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"fan":229.5},"id":13}
+[15:40:47] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":13,"method":1030,"result":{"error_code":0}}
+[15:40:48] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"fan":204},"id":14}
+[15:40:48] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":14,"method":1030,"result":{"error_code":0}}
+[15:40:48] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"fan":178.5},"id":15}
+[15:40:48] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":15,"method":1030,"result":{"error_code":0}}
+[15:40:48] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":882,"method":6000,"result":{"fans":{"fan":{"speed":178.5}}}}
+[15:40:48] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"fan":153},"id":16}
+[15:40:49] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":16,"method":1030,"result":{"error_code":0}}
+[15:40:49] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"fan":127.5},"id":17}
+[15:40:49] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":17,"method":1030,"result":{"error_code":0}}
+[15:40:49] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":883,"method":6000,"result":{"fans":{"fan":{"speed":127.5}}}}
+[15:40:50] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"fan":0},"id":18}
+[15:40:50] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":18,"method":1030,"result":{"error_code":0}}
+[15:40:50] elegoo/F01AKDEMO000000/api_status  <api_status 64b> {"id":884,"method":6000,"result":{"fans":{"fan":{"speed":0.0}}}}
+[15:40:53] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"aux_fan":255},"id":19}
+[15:40:53] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":19,"method":1030,"result":{"error_code":0}}
+[15:40:53] elegoo/F01AKDEMO000000/api_status  <api_status 102b> {"id":885,"method":6000,"result":{"fans":{"aux_fan":{"speed":255.0}},"heater_bed":{"temperature":26}}}
+[15:40:54] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"aux_fan":229.5},"id":20}
+[15:40:54] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":20,"method":1030,"result":{"error_code":0}}
+[15:40:54] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"aux_fan":204},"id":21}
+[15:40:54] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":21,"method":1030,"result":{"error_code":0}}
+[15:40:54] elegoo/F01AKDEMO000000/api_status  <api_status 70b> {"id":886,"method":6000,"result":{"fans":{"aux_fan":{"speed":229.5}}}}
+[15:40:55] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"aux_fan":178.5},"id":22}
+[15:40:55] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":22,"method":1030,"result":{"error_code":0}}
+[15:40:55] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:40:55] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:40:55] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"aux_fan":153},"id":23}
+[15:40:55] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":23,"method":1030,"result":{"error_code":0}}
+[15:40:55] elegoo/F01AKDEMO000000/api_status  <api_status 70b> {"id":887,"method":6000,"result":{"fans":{"aux_fan":{"speed":153.0}}}}
+[15:40:58] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"aux_fan":0},"id":24}
+[15:40:58] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":24,"method":1030,"result":{"error_code":0}}
+[15:40:58] elegoo/F01AKDEMO000000/api_status  <api_status 68b> {"id":888,"method":6000,"result":{"fans":{"aux_fan":{"speed":0.0}}}}
+[15:40:58] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"box_fan":255},"id":25}
+[15:40:59] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":25,"method":1030,"result":{"error_code":0}}
+[15:40:59] elegoo/F01AKDEMO000000/api_status  <api_status 70b> {"id":889,"method":6000,"result":{"fans":{"box_fan":{"speed":255.0}}}}
+[15:41:00] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"box_fan":229.5},"id":26}
+[15:41:00] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":26,"method":1030,"result":{"error_code":0}}
+[15:41:00] elegoo/F01AKDEMO000000/api_status  <api_status 70b> {"id":890,"method":6000,"result":{"fans":{"box_fan":{"speed":229.5}}}}
+[15:41:01] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"box_fan":204},"id":27}
+[15:41:01] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":27,"method":1030,"result":{"error_code":0}}
+[15:41:01] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"box_fan":178.5},"id":28}
+[15:41:01] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":28,"method":1030,"result":{"error_code":0}}
+[15:41:01] elegoo/F01AKDEMO000000/api_status  <api_status 102b> {"id":891,"method":6000,"result":{"fans":{"box_fan":{"speed":178.5}},"heater_bed":{"temperature":27}}}
+[15:41:02] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"box_fan":153},"id":29}
+[15:41:02] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":29,"method":1030,"result":{"error_code":0}}
+[15:41:02] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"box_fan":127.5},"id":30}
+[15:41:02] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":30,"method":1030,"result":{"error_code":0}}
+[15:41:02] elegoo/F01AKDEMO000000/api_status  <api_status 70b> {"id":892,"method":6000,"result":{"fans":{"box_fan":{"speed":127.5}}}}
+[15:41:04] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1030,"params":{"box_fan":0},"id":31}
+[15:41:04] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":31,"method":1030,"result":{"error_code":0}}
+[15:41:04] elegoo/F01AKDEMO000000/api_status  <api_status 68b> {"id":893,"method":6000,"result":{"fans":{"box_fan":{"speed":0.0}}}}
+[15:41:05] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:41:05] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:41:10] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":894,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:41:15] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:41:15] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:41:18] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":32}
+[15:41:18] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":32,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":0,"temperature":28},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":0.0},"fan":{"speed":0.0},"heater_fan":{"speed":0.0}},"gcode_move":{"extruder":0.0,"speed":1500,"speed_mode":1,"x":5.0,"y":5.0,"z":-0.089948},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":""},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:41:20] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":895,"method":6000,"result":{"heater_bed":{"temperature":25}}}
+[15:41:22] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1026,"params":{"homed_axes":"xyz"},"id":33}
+[15:41:22] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":33,"method":1026,"result":{"error_code":0}}
+[15:41:22] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":896,"method":6000,"result":{"machine_status":{"status":10}}}
+[15:41:22] elegoo/F01AKDEMO000000/api_status  <api_status 72b> {"id":897,"method":6000,"result":{"machine_status":{"sub_status":2801}}}
+[15:41:22] elegoo/F01AKDEMO000000/api_status  <api_status 72b> {"id":898,"method":6000,"result":{"machine_status":{"sub_status":1045}}}
+[15:41:22] elegoo/F01AKDEMO000000/api_status  <api_status 132b> {"id":899,"method":6000,"result":{"extruder":{"target":140},"fans":{"controller_fan":{"speed":255.0},"heater_fan":{"speed":255.0}}}}
+[15:41:24] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":900,"method":6000,"result":{"extruder":{"temperature":29}}}
+[15:41:25] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:41:25] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:41:25] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":901,"method":6000,"result":{"extruder":{"temperature":33}}}
+[15:41:26] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":902,"method":6000,"result":{"extruder":{"temperature":39}}}
+[15:41:27] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":903,"method":6000,"result":{"extruder":{"temperature":45}}}
+[15:41:28] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":904,"method":6000,"result":{"extruder":{"temperature":52}}}
+[15:41:29] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":905,"method":6000,"result":{"extruder":{"temperature":58}}}
+[15:41:30] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":906,"method":6000,"result":{"extruder":{"temperature":63}}}
+[15:41:31] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":907,"method":6000,"result":{"extruder":{"temperature":69}}}
+[15:41:32] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":908,"method":6000,"result":{"extruder":{"temperature":74}}}
+[15:41:33] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":909,"method":6000,"result":{"extruder":{"temperature":79}}}
+[15:41:34] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":910,"method":6000,"result":{"extruder":{"temperature":84}}}
+[15:41:35] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:41:35] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:41:35] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":911,"method":6000,"result":{"extruder":{"temperature":89}}}
+[15:41:36] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":912,"method":6000,"result":{"extruder":{"temperature":94}}}
+[15:41:37] elegoo/F01AKDEMO000000/api_status  <api_status 65b> {"id":913,"method":6000,"result":{"extruder":{"temperature":98}}}
+[15:41:38] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":914,"method":6000,"result":{"extruder":{"temperature":103}}}
+[15:41:39] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":915,"method":6000,"result":{"extruder":{"temperature":107}}}
+[15:41:40] elegoo/F01AKDEMO000000/api_status  <api_status 98b> {"id":916,"method":6000,"result":{"extruder":{"temperature":112},"heater_bed":{"temperature":26}}}
+[15:41:41] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":917,"method":6000,"result":{"extruder":{"temperature":116}}}
+[15:41:42] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":918,"method":6000,"result":{"extruder":{"temperature":120}}}
+[15:41:43] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":919,"method":6000,"result":{"extruder":{"temperature":124}}}
+[15:41:44] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":920,"method":6000,"result":{"extruder":{"temperature":128}}}
+[15:41:45] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:41:45] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:41:45] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":921,"method":6000,"result":{"extruder":{"temperature":132}}}
+[15:41:46] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":922,"method":6000,"result":{"extruder":{"temperature":134}}}
+[15:41:47] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":923,"method":6000,"result":{"extruder":{"temperature":136}}}
+[15:41:48] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":924,"method":6000,"result":{"extruder":{"temperature":137}}}
+[15:41:49] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":925,"method":6000,"result":{"extruder":{"temperature":138}}}
+[15:41:50] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":926,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:41:51] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":927,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:41:52] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"type":"PING"}
+[15:41:52] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"type":"PONG"}
+[15:41:52] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":928,"method":6000,"result":{"extruder":{"temperature":141}}}
+[15:41:53] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":929,"method":6000,"result":{"extruder":{"temperature":142}}}
+[15:41:54] elegoo/F01AKDEMO000000/api_status  <api_status 72b> {"id":930,"method":6000,"result":{"machine_status":{"sub_status":1066}}}
+[15:41:55] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:41:55] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:41:55] elegoo/F01AKDEMO000000/api_status  <api_status 137b> {"id":931,"method":6000,"result":{"extruder":{"temperature":141},"gcode_move":{"x":385.75,"z":-0.181042},"tool_head":{"homed_axes":"x"}}}
+[15:41:56] elegoo/F01AKDEMO000000/api_status  <api_status 125b> {"id":932,"method":6000,"result":{"gcode_move":{"x":8.0,"y":406.0,"z":-0.35176947708333334},"tool_head":{"homed_axes":"xy"}}}
+[15:41:58] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":933,"method":6000,"result":{"extruder":{"temperature":142}}}
+[15:42:01] elegoo/F01AKDEMO000000/api_status  <api_status 83b> {"id":934,"method":6000,"result":{"gcode_move":{"y":8.0,"z":-0.09540107466579861}}}
+[15:42:02] elegoo/F01AKDEMO000000/api_status  <api_status 117b> {"id":935,"method":6000,"result":{"extruder":{"temperature":141},"gcode_move":{"x":385.75,"z":-0.17982170208333334}}}
+[15:42:03] elegoo/F01AKDEMO000000/api_status  <api_status 83b> {"id":936,"method":6000,"result":{"gcode_move":{"x":8.0,"z":-0.09540107466579861}}}
+[15:42:04] elegoo/F01AKDEMO000000/api_status  <api_status 85b> {"id":937,"method":6000,"result":{"gcode_move":{"y":406.0,"z":-0.35176947708333334}}}
+[15:42:05] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:42:05] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:42:05] elegoo/F01AKDEMO000000/api_status  <api_status 146b> {"id":938,"method":6000,"result":{"extruder":{"temperature":142},"gcode_move":{"y":8.0,"z":-0.09540107466579861},"heater_bed":{"temperature":25}}}
+[15:42:06] elegoo/F01AKDEMO000000/api_status  <api_status 124b> {"id":939,"method":6000,"result":{"gcode_move":{"x":52.5,"y":264.0,"z":383.4602715796875},"tool_head":{"homed_axes":"xyz"}}}
+[15:42:08] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":940,"method":6000,"result":{"extruder":{"temperature":141}}}
+[15:42:09] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":941,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:42:12] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":942,"method":6000,"result":{"extruder":{"temperature":141}}}
+[15:42:15] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:42:15] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:42:15] elegoo/F01AKDEMO000000/api_status  <api_status 102b> {"id":943,"method":6000,"result":{"extruder":{"temperature":140},"gcode_move":{"z":10.0521595796875}}}
+[15:42:16] elegoo/F01AKDEMO000000/api_status  <api_status 72b> {"id":944,"method":6000,"result":{"machine_status":{"sub_status":2802}}}
+[15:42:16] elegoo/F01AKDEMO000000/api_status  <api_status 80b> {"id":945,"method":6000,"result":{"machine_status":{"status":1,"sub_status":0}}}
+[15:42:16] elegoo/F01AKDEMO000000/api_status  <api_status 70b> {"id":946,"method":6000,"result":{"gcode_move":{"z":4.6575675796875}}}
+[15:42:17] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":35}
+[15:42:17] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":35,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":140},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":1500,"speed_mode":1,"x":52.5,"y":264.0,"z":4.6575675796875},"heater_bed":{"target":0,"temperature":25},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:17] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"z","distance":30},"id":36}
+[15:42:17] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":36,"method":1027,"result":{"error_code":0}}
+[15:42:17] elegoo/F01AKDEMO000000/api_status  <api_status 76b> {"id":947,"method":6000,"result":{"gcode_move":{"speed":600,"z":34.657568}}}
+[15:42:18] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":37}
+[15:42:18] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":37,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":140},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":600,"speed_mode":1,"x":52.5,"y":264.0,"z":34.657568},"heater_bed":{"target":0,"temperature":25},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:18] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"z","distance":30},"id":38}
+[15:42:18] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":38,"method":1027,"result":{"error_code":0}}
+[15:42:18] elegoo/F01AKDEMO000000/api_status  <api_status 64b> {"id":948,"method":6000,"result":{"gcode_move":{"z":64.657568}}}
+[15:42:21] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":949,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:42:23] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":950,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:42:24] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":39}
+[15:42:24] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":39,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":139},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":600,"speed_mode":1,"x":52.5,"y":264.0,"z":64.657568},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:24] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"y","distance":-30},"id":40}
+[15:42:24] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":40,"method":1027,"result":{"error_code":0}}
+[15:42:24] elegoo/F01AKDEMO000000/api_status  <api_status 73b> {"id":951,"method":6000,"result":{"gcode_move":{"speed":6000,"y":234.0}}}
+[15:42:25] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:42:25] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:42:25] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":952,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:42:25] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":41}
+[15:42:25] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":41,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":140},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":52.5,"y":234.0,"z":64.657568},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:26] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"y","distance":-30},"id":42}
+[15:42:26] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":42,"method":1027,"result":{"error_code":0}}
+[15:42:26] elegoo/F01AKDEMO000000/api_status  <api_status 60b> {"id":953,"method":6000,"result":{"gcode_move":{"y":204.0}}}
+[15:42:27] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":43}
+[15:42:27] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":43,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":140},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":52.5,"y":204.0,"z":64.657568},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:27] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"y","distance":-30},"id":44}
+[15:42:27] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":44,"method":1027,"result":{"error_code":0}}
+[15:42:27] elegoo/F01AKDEMO000000/api_status  <api_status 60b> {"id":954,"method":6000,"result":{"gcode_move":{"y":174.0}}}
+[15:42:28] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":45}
+[15:42:28] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":45,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":140},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":52.5,"y":174.0,"z":64.657568},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:29] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"x","distance":30},"id":46}
+[15:42:29] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":46,"method":1027,"result":{"error_code":0}}
+[15:42:29] elegoo/F01AKDEMO000000/api_status  <api_status 90b> {"id":955,"method":6000,"result":{"extruder":{"temperature":139},"gcode_move":{"x":82.5}}}
+[15:42:30] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":47}
+[15:42:30] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":47,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":139},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":82.5,"y":174.0,"z":64.657568},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:30] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"x","distance":30},"id":48}
+[15:42:30] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":48,"method":1027,"result":{"error_code":0}}
+[15:42:30] elegoo/F01AKDEMO000000/api_status  <api_status 60b> {"id":956,"method":6000,"result":{"gcode_move":{"x":112.5}}}
+[15:42:31] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":49}
+[15:42:31] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":49,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":139},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":112.5,"y":174.0,"z":64.657568},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:31] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"x","distance":30},"id":50}
+[15:42:31] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":50,"method":1027,"result":{"error_code":0}}
+[15:42:31] elegoo/F01AKDEMO000000/api_status  <api_status 92b> {"id":957,"method":6000,"result":{"gcode_move":{"x":142.5},"heater_bed":{"temperature":27}}}
+[15:42:32] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":51}
+[15:42:32] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":51,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":139},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":142.5,"y":174.0,"z":64.657568},"heater_bed":{"target":0,"temperature":27},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:32] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"x","distance":30},"id":52}
+[15:42:32] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":52,"method":1027,"result":{"error_code":0}}
+[15:42:32] elegoo/F01AKDEMO000000/api_status  <api_status 91b> {"id":958,"method":6000,"result":{"extruder":{"temperature":140},"gcode_move":{"x":172.5}}}
+[15:42:34] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":53}
+[15:42:34] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":53,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":140},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":172.5,"y":174.0,"z":64.657568},"heater_bed":{"target":0,"temperature":27},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:34] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"x","distance":-30},"id":54}
+[15:42:34] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":54,"method":1027,"result":{"error_code":0}}
+[15:42:34] elegoo/F01AKDEMO000000/api_status  <api_status 60b> {"id":959,"method":6000,"result":{"gcode_move":{"x":142.5}}}
+[15:42:35] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":55}
+[15:42:35] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":55,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":140},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":142.5,"y":174.0,"z":64.657568},"heater_bed":{"target":0,"temperature":27},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:35] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"x","distance":-30},"id":56}
+[15:42:35] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":56,"method":1027,"result":{"error_code":0}}
+[15:42:35] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:42:35] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:42:35] elegoo/F01AKDEMO000000/api_status  <api_status 60b> {"id":960,"method":6000,"result":{"gcode_move":{"x":112.5}}}
+[15:42:36] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":961,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:42:37] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":57}
+[15:42:37] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":57,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":139},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":112.5,"y":174.0,"z":64.657568},"heater_bed":{"target":0,"temperature":27},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:37] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"y","distance":30},"id":58}
+[15:42:37] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":58,"method":1027,"result":{"error_code":0}}
+[15:42:37] elegoo/F01AKDEMO000000/api_status  <api_status 60b> {"id":962,"method":6000,"result":{"gcode_move":{"y":204.0}}}
+[15:42:39] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":963,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:42:40] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":59}
+[15:42:40] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":59,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":140},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":112.5,"y":204.0,"z":64.657568},"heater_bed":{"target":0,"temperature":27},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:40] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"y","distance":30},"id":60}
+[15:42:40] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":60,"method":1027,"result":{"error_code":0}}
+[15:42:40] elegoo/F01AKDEMO000000/api_status  <api_status 92b> {"id":964,"method":6000,"result":{"gcode_move":{"y":234.0},"heater_bed":{"temperature":26}}}
+[15:42:43] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":965,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:42:44] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1002,"id":61}
+[15:42:44] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":61,"method":1002,"result":{"error_code":0,"external_device":{"camera":true,"type":"0303","u_disk":false},"extruder":{"filament_detect_enable":1,"filament_detected":0,"target":140,"temperature":139},"fans":{"aux_fan":{"speed":0.0},"box_fan":{"speed":0.0},"controller_fan":{"speed":255.0},"fan":{"speed":0.0},"heater_fan":{"speed":255.0}},"gcode_move":{"extruder":0.0,"speed":6000,"speed_mode":1,"x":112.5,"y":234.0,"z":64.657568},"heater_bed":{"target":0,"temperature":26},"led":{"status":1},"machine_status":{"exception_status":[],"progress":0,"status":1,"sub_status":0,"sub_status_reason_code":0},"print_status":{"bed_mesh_detect":false,"current_layer":0,"enable":false,"filament_detect":false,"filename":"","print_duration":0,"remaining_time_sec":0,"state":"","total_duration":0,"uuid":""},"tool_head":{"homed_axes":"xyz"},"ztemperature_sensor":{"measured_max_temperature":0,"measured_min_temperature":0,"temperature":25}}}
+[15:42:44] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1027,"params":{"axes":"z","distance":-30},"id":62}
+[15:42:44] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":62,"method":1027,"result":{"error_code":0}}
+[15:42:44] elegoo/F01AKDEMO000000/api_status  <api_status 76b> {"id":966,"method":6000,"result":{"gcode_move":{"speed":600,"z":34.657568}}}
+[15:42:45] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:42:45] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:42:46] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":967,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:42:49] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":968,"method":6000,"result":{"heater_bed":{"temperature":25}}}
+[15:42:50] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":969,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:42:52] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":970,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:42:55] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1051,"params":{"url":"picture/ECC2_0.4_nozzle_cleaner_Dots_amp0p24_80 Elegoo PETG _0.12_1h3m.gcode20260719173315"},"id":63}
+[15:42:55] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":63,"method":1051,"result":{"error_code":0,"url":"video/ECC2_0.4_nozzle_cleaner_Dots_amp0p24_80 Elegoo PETG _0.12_1h3m.gcode20260719173315.mp4"}}
+[15:42:55] elegoo/F01AKDEMO000000/api_status  <api_status 84b> {"id":971,"method":6000,"result":{"machine_status":{"status":12,"sub_status":3020}}}
+[15:42:55] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:42:55] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:42:57] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":972,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:42:59] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":973,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:43:03] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":974,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:43:04] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":975,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:43:05] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:43:05] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:43:06] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":976,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:43:10] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":977,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:43:13] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":978,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:43:15] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":979,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:43:15] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:43:15] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:43:18] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":980,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:43:20] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":981,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:43:24] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":982,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:43:25] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"type":"PING"}
+[15:43:25] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"type":"PONG"}
+[15:43:25] elegoo/F01AKDEMO000000/api_status  <api_status 72b> {"id":983,"method":6000,"result":{"machine_status":{"sub_status":3021}}}
+[15:43:25] elegoo/F01AKDEMO000000/api_status  <api_status 80b> {"id":984,"method":6000,"result":{"machine_status":{"status":1,"sub_status":0}}}
+[15:43:25] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1036,"id":65}
+[15:43:25] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":65,"method":1036,"result":{"error_code":0,"history_task_list":[{"begin_time":1783771082,"end_time":1783773522,"task_id":"245f8405-5994-4898-850f-03dda99208cb","task_name":"ECC2_0.4_flowrate_0_Elegoo PETG Orange 3DFP _0.2_33m1s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_flowrate_0_Elegoo PETG Orange 3DFP _0.2_33m1s.gcode20260711195802"},{"begin_time":1783774723,"end_time":1783776783,"task_id":"9f8f5377-0009-4fdd-bb8e-f1e41a8307d2","task_name":"ECC2_0.4_flowrate_0_Elegoo PETG Orange _0.2_31m34s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_flowrate_0_Elegoo PETG Orange _0.2_31m34s.gcode20260711205844"},{"begin_time":1783780689,"end_time":1783781970,"task_id":"a4ff9102-bfeb-4538-8555-94a1264f8f63","task_name":"ECC2_0.4_dd_Elegoo PETG Orange _0.2_15m3s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_dd_Elegoo PETG Orange _0.2_15m3s.gcode20260711223809"},{"begin_time":1783784556,"end_time":1783785556,"task_id":"f8d459e6-081c-40c9-8ecc-e7072770c395","task_name":"ECC2_0.4_dd_Elegoo PETG Orange 1.05 _0.2_13m52s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_dd_Elegoo PETG Orange 1.05 _0.2_13m52s.gcode20260711234237"},{"begin_time":1783793604,"end_time":1783795715,"task_id":"6a1a37e2-7337-42e5-8180-566eef5119a5","task_name":"ECC2_0.4_Move Face24_Elegoo PETG Orange _0.2_33m28s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_Move Face24_Elegoo PETG Orange _0.2_33m28s.gcode20260712021324"},{"begin_time":1783803470,"end_time":1783805623,"task_id":"158b61a1-abcf-4a9d-b53d-bfefcbd7a6e0","task_name":"ECC2_0.4_Move Face24_Elegoo PETG Orange _0.2_34m18s.gcode","task_status":1,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783806433,"end_time":1783809524,"task_id":"230697dc-533f-4b0b-b469-cf2f9fd2f672","task_name":"ECC2_0.4_Fillet34_Elegoo PETG Orange _0.2_49m22s.gcode","task_status":1,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783850017,"end_time":1783874683,"task_id":"feb4408d-2132-44fe-8c38-eb11c4ba4f7f","task_name":"ECC2_0.4_philips-3000-add-hole_Weave-1_amp0p50_Kingroon PETG fixed _0.2_7h9m.gcode","task_status":1,"time_lapse_video_duration":15,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_philips-3000-add-hole_Weave-1_amp0p50_Kingroon PETG fixed _0.2_7h9m.gcode20260712175340"},{"begin_time":1783883203,"end_time":1783904028,"task_id":"ee1cba92-07db-4b2d-9d77-d0f326f0ab4d","task_name":"ECC2_0.4_philips-3000-add-hole_Weave-1_amp0p50_Kingroon PETG fixed _0.2_4h43m.gcode","task_status":1,"time_lapse_video_duration":15,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_philips-3000-add-hole_Weave-1_amp0p50_Kingroon PETG fixed _0.2_4h43m.gcode20260713030644"},{"begin_time":1783949143,"end_time":1783950377,"task_id":"3e3cec34-aef6-48a9-a7c1-c24990589236","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_25m56s.gcode","task_status":2,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783950944,"end_time":1783953049,"task_id":"afb02f34-9463-44c9-8017-e768784635b4","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_25m56s.gcode","task_status":1,"time_lapse_video_duration":5,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_25m56s.gcode20260713215544"},{"begin_time":1783953780,"end_time":1783954027,"task_id":"86940f6a-416f-42e8-a9ef-09449ce9547a","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_3h27m.gcode","task_status":2,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783954524,"end_time":1783954959,"task_id":"1f170afa-af6f-4a65-a5cf-a329f26b7512","task_name":"ECC2_0.4_20_Elegoo PLA Matte _0.2_40s.gcode","task_status":1,"time_lapse_video_duration":1,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_20_Elegoo PLA Matte _0.2_40s.gcode20260713225525"},{"begin_time":1783955226,"end_time":1783955524,"task_id":"04bbee5e-5f44-45ca-afd0-3dd0e01765f4","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_3h27m.gcode","task_status":2,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783955582,"end_time":1783966949,"task_id":"116e6a95-7153-4ef4-bd0f-4395f1a8a3b4","task_name":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_3h27m.gcode","task_status":1,"time_lapse_video_duration":15,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_3h27m.gcode20260713231302"},{"begin_time":1783969119,"end_time":1783970976,"task_id":"d49f4003-4971-4439-8a2c-31cbb22da8a0","task_name":"ECC2_0.4_Koala AMS_80 Elegoo PETG _0.2_3h54m.gcode","task_status":2,"time_lapse_video_duration":0,"time_lapse_video_size":0,"time_lapse_video_status":0,"time_lapse_video_url":""},{"begin_time":1783971381,"end_time":1783987848,"task_id":"58d40cfd-d11d-46bd-93b8-c11f052f53ef","task_name":"ECC2_0.4_Koala AMS_80 Elegoo PETG _0.2_3h54m.gcode","task_status":1,"time_lapse_video_duration":12,"time_lapse_video_size":0,"time_lapse_video_status":1,"time_lapse_video_url":"picture/ECC2_0.4_Koala AMS_80 Elegoo PETG _0.2_3h54m.gcode20260714033622"},{"begin_time":1784014968,"end_time":1784015966,"t
+[15:43:25] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:43:26] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:43:26] elegoo/F01AKDEMO000000/api_status  <api_status 84b> {"id":985,"method":6000,"result":{"machine_status":{"status":11,"sub_status":3000}}}
+[15:43:26] elegoo/F01AKDEMO000000/api_status  <api_status 72b> {"id":986,"method":6000,"result":{"machine_status":{"sub_status":3001}}}
+[15:43:26] elegoo/F01AKDEMO000000/api_status  <api_status 80b> {"id":987,"method":6000,"result":{"machine_status":{"status":1,"sub_status":0}}}
+[15:43:27] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1044,"params":{"storage_media":"local","offset":0,"limit":20},"id":66}
+[15:43:27] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":66,"method":1044,"result":{"error_code":0,"file_list":[{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784503283,"filename":"ECC2_0.4_Hanger Rectangular (5)_Elegoo PLA Matte _0.12_1h9m.gcode","last_print_time":0,"layer":233,"print_time":4137,"size":9012919,"total_filament_used":24.31,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#E4BD68","name":"PLA","t":0},{"color":"#3F8E43","name":"PLA","t":1},{"color":"#000000","name":"PLA","t":2}],"create_time":1784488726,"filename":"ECC2_0.4_grogu_Boolean_Elegoo PLA Matte _0.2_1h25m.gcode","last_print_time":0,"layer":81,"print_time":5079,"size":5031400,"total_filament_used":23.6,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#000000","name":"PETG","t":0}],"create_time":1784469007,"filename":"ECC2_0.4_Tab Oper v7_80 Elegoo PETG _0.2_1h25m.gcode","last_print_time":0,"layer":40,"print_time":5079,"size":6030188,"total_filament_used":32.21,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#26A69A","name":"PETG","t":0}],"create_time":1784453592,"filename":"ECC2_0.4_nozzle_cleaner_Dots_amp0p24_80 Elegoo PETG _0.12_1h3m.gcode","last_print_time":0,"layer":125,"print_time":3792,"size":8557029,"total_filament_used":9.91,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#8000FF","name":"PLA","t":0}],"create_time":1784397018,"filename":"ECC2_0.4_Сборка_Elegoo PLA Silk _0.12_13h46m.gcode","last_print_time":0,"layer":449,"print_time":49535,"size":37464350,"total_filament_used":183.59,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#8000FF","name":"PLA","t":0}],"create_time":1784364576,"filename":"ECC2_0.4_Body1_Elegoo PLA Silk _0.12_1h44m.gcode","last_print_time":0,"layer":449,"print_time":6234,"size":4424892,"total_filament_used":20.9,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#E4BD68","name":"PLA","t":0}],"create_time":1784332006,"filename":"ECC2_0.4_kpbl底座_Elegoo PLA Matte _0.12_2h25m.gcode","last_print_time":0,"layer":404,"print_time":8712,"size":24123265,"total_filament_used":40.37,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#307FE2","name":"PLA","t":0}],"create_time":1784317528,"filename":"ECC2_0.4_4 Ring Gyro Fidget_Elegoo PLA Silk _0.2_1h7m.gcode","last_print_time":0,"layer":65,"print_time":4046,"size":7315044,"total_filament_used":13.74,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784307863,"filename":"ECC2_0.4_Bodyp_Elegoo PLA Silk _0.2_2h20m.gcode","last_print_time":0,"layer":230,"print_time":8403,"size":21433214,"total_filament_used":35.78,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#79FF79","name":"PLA","t":0}],"create_time":1784283949,"filename":"ECC2_0.4_Flexi Jellyfish V5 Small v3_Elegoo PLA Silk _0.2_2h54m.gcode","last_print_time":0,"layer":154,"print_time":10427,"size":19263424,"total_filament_used":35.75,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#DD934F","name":"PLA","t":0}],"create_time":1784219108,"filename":"ECC2_0.4_Camel (1)_Elegoo PLA Matte _0.12_5h18m.gcode","last_print_time":0,"layer":600,"print_time":19071,"size":25858731,"total_filament_used":92.88,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#DD934F","name":"PLA","t":0}],"create_time":1784189637,"filename":"ECC2_0.4_Camel (1)_Elegoo PLA Matte _0.12_5h55m.gcode","last_print_time":0,"layer":680,"print_time":21273,"size":28834423,"total_filament_used":93.67,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784160410,"filename":"ECC2_0.4_shang_Elegoo PLA Matte _0.2_2h21m.gcode","last_print_time":0,"layer":15,"print_time":8470,"size":12709217,"total_filament_used":36.5,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784150200,"filename":"ECC2_0.4_luosiluomu_Elegoo PLA Matte _0.2_2h10m.gcode","last_print_time":0,"layer":31,"print_time":7790,"size":12502883,"total_filament_used":26.41,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784142637,"filename":"ECC2_0.4_luosiluomu_Elegoo PLA Matte _0.2_1h54m.gcode","last_print_time":0,"layer":31,"print_time":6838,"size":10998655,"total_filament_used":23.26,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784134208,"filename":"ECC2_0.4_shang_Elegoo PLA Matte _0.2_1h49m.gcode","last_print_time":0,"layer":15,"print_time":6569,"size":9617494,"total_filament_used":30.21,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784129845,"filename":"ECC2_0.4_7pian_Elegoo PLA Matte _0.2_16m0s.gcode","last_print_time":0,"layer":10,"print_time":960,"size":1576250,"total_filament_used":3.69,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784122555,"filename":"ECC2_0.4_8pian_Elegoo PLA Matte _0.2_15m37s.gcode","last_print_time":0,"layer":9,"print_time":937,"size":1134711,"total_filament_used":3.82,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784115927,"filename":"ECC2_0.4_8pian_Elegoo PLA Matte _0.2_16m33s.gcode","last_print_time":0,"layer":9,"print_time":993,"size":1413134,"total_filament_used":3.86,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FFFFFF","name":"PLA","t":2}],"create_time":1784100595,"filename":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_5m50s.gcode","last_print_time":0,"layer":62,"print_time":350,"size":497331,"total_filament_used":1.25,"total_print_times":0,"type":"file"}],"offset":0,"total":237}}
+[15:43:28] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":988,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:43:31] elegoo/F01AKDEMO000000/api_status  <api_status 98b> {"id":989,"method":6000,"result":{"extruder":{"temperature":139},"heater_bed":{"temperature":26}}}
+[15:43:32] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":990,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:43:33] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":991,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:43:34] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":992,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:43:36] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:43:36] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:43:38] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":993,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:43:41] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":994,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:43:45] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":995,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:43:46] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:43:46] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:43:46] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1028,"params":{"extruder":130},"id":67}
+[15:43:47] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":67,"method":1028,"result":{"error_code":0}}
+[15:43:47] elegoo/F01AKDEMO000000/api_status  <api_status 93b> {"id":996,"method":6000,"result":{"extruder":{"target":130},"heater_bed":{"temperature":25}}}
+[15:43:48] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":997,"method":6000,"result":{"extruder":{"temperature":140}}}
+[15:43:50] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1028,"params":{"extruder":0},"id":68}
+[15:43:50] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":68,"method":1028,"result":{"error_code":0}}
+[15:43:50] elegoo/F01AKDEMO000000/api_status  <api_status 59b> {"id":998,"method":6000,"result":{"extruder":{"target":0}}}
+[15:43:51] elegoo/F01AKDEMO000000/api_status  <api_status 66b> {"id":999,"method":6000,"result":{"extruder":{"temperature":139}}}
+[15:43:53] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1000,"method":6000,"result":{"extruder":{"temperature":138}}}
+[15:43:54] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1028,"params":{"heater_bed":25},"id":69}
+[15:43:54] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":69,"method":1028,"result":{"error_code":0}}
+[15:43:54] elegoo/F01AKDEMO000000/api_status  <api_status 94b> {"id":1001,"method":6000,"result":{"extruder":{"temperature":137},"heater_bed":{"target":25}}}
+[15:43:56] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:43:56] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:43:56] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1028,"params":{"heater_bed":30},"id":70}
+[15:43:56] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":70,"method":1028,"result":{"error_code":0}}
+[15:43:56] elegoo/F01AKDEMO000000/api_status  <api_status 94b> {"id":1002,"method":6000,"result":{"extruder":{"temperature":136},"heater_bed":{"target":30}}}
+[15:43:57] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1003,"method":6000,"result":{"extruder":{"temperature":135}}}
+[15:43:58] elegoo/F01AKDEMO000000/api_status  <api_status 68b> {"id":1004,"method":6000,"result":{"heater_bed":{"temperature":26}}}
+[15:43:59] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1005,"method":6000,"result":{"extruder":{"temperature":134}}}
+[15:44:00] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1006,"method":6000,"result":{"extruder":{"temperature":133}}}
+[15:44:01] elegoo/F01AKDEMO000000/api_status  <api_status 68b> {"id":1007,"method":6000,"result":{"heater_bed":{"temperature":27}}}
+[15:44:02] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1028,"params":{"heater_bed":0},"id":71}
+[15:44:02] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":71,"method":1028,"result":{"error_code":0}}
+[15:44:02] elegoo/F01AKDEMO000000/api_status  <api_status 93b> {"id":1008,"method":6000,"result":{"extruder":{"temperature":132},"heater_bed":{"target":0}}}
+[15:44:04] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1009,"method":6000,"result":{"extruder":{"temperature":131}}}
+[15:44:05] elegoo/F01AKDEMO000000/api_status  <api_status 99b> {"id":1010,"method":6000,"result":{"extruder":{"temperature":130},"heater_bed":{"temperature":28}}}
+[15:44:06] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:44:06] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:44:07] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1011,"method":6000,"result":{"extruder":{"temperature":129}}}
+[15:44:09] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1012,"method":6000,"result":{"extruder":{"temperature":128}}}
+[15:44:11] elegoo/F01AKDEMO000000/api_status  <api_status 99b> {"id":1013,"method":6000,"result":{"extruder":{"temperature":127},"heater_bed":{"temperature":29}}}
+[15:44:13] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1014,"method":6000,"result":{"extruder":{"temperature":126}}}
+[15:44:15] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1015,"method":6000,"result":{"extruder":{"temperature":125}}}
+[15:44:16] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:44:16] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:44:16] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1016,"method":6000,"result":{"extruder":{"temperature":124}}}
+[15:44:17] elegoo/F01AKDEMO000000/api_status  <api_status 85b> {"id":1017,"method":6000,"result":{"machine_status":{"status":11,"sub_status":3000}}}
+[15:44:17] elegoo/F01AKDEMO000000/api_status  <api_status 73b> {"id":1018,"method":6000,"result":{"machine_status":{"sub_status":3001}}}
+[15:44:17] elegoo/F01AKDEMO000000/api_status  <api_status 81b> {"id":1019,"method":6000,"result":{"machine_status":{"status":1,"sub_status":0}}}
+[15:44:18] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1044,"params":{"storage_media":"local","offset":0,"limit":20},"id":72}
+[15:44:18] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":72,"method":1044,"result":{"error_code":0,"file_list":[{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784503283,"filename":"ECC2_0.4_Hanger Rectangular (5)_Elegoo PLA Matte _0.12_1h9m.gcode","last_print_time":0,"layer":233,"print_time":4137,"size":9012919,"total_filament_used":24.31,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#E4BD68","name":"PLA","t":0},{"color":"#3F8E43","name":"PLA","t":1},{"color":"#000000","name":"PLA","t":2}],"create_time":1784488726,"filename":"ECC2_0.4_grogu_Boolean_Elegoo PLA Matte _0.2_1h25m.gcode","last_print_time":0,"layer":81,"print_time":5079,"size":5031400,"total_filament_used":23.6,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#000000","name":"PETG","t":0}],"create_time":1784469007,"filename":"ECC2_0.4_Tab Oper v7_80 Elegoo PETG _0.2_1h25m.gcode","last_print_time":0,"layer":40,"print_time":5079,"size":6030188,"total_filament_used":32.21,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#26A69A","name":"PETG","t":0}],"create_time":1784453592,"filename":"ECC2_0.4_nozzle_cleaner_Dots_amp0p24_80 Elegoo PETG _0.12_1h3m.gcode","last_print_time":0,"layer":125,"print_time":3792,"size":8557029,"total_filament_used":9.91,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#8000FF","name":"PLA","t":0}],"create_time":1784397018,"filename":"ECC2_0.4_Сборка_Elegoo PLA Silk _0.12_13h46m.gcode","last_print_time":0,"layer":449,"print_time":49535,"size":37464350,"total_filament_used":183.59,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#8000FF","name":"PLA","t":0}],"create_time":1784364576,"filename":"ECC2_0.4_Body1_Elegoo PLA Silk _0.12_1h44m.gcode","last_print_time":0,"layer":449,"print_time":6234,"size":4424892,"total_filament_used":20.9,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#E4BD68","name":"PLA","t":0}],"create_time":1784332006,"filename":"ECC2_0.4_kpbl底座_Elegoo PLA Matte _0.12_2h25m.gcode","last_print_time":0,"layer":404,"print_time":8712,"size":24123265,"total_filament_used":40.37,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#307FE2","name":"PLA","t":0}],"create_time":1784317528,"filename":"ECC2_0.4_4 Ring Gyro Fidget_Elegoo PLA Silk _0.2_1h7m.gcode","last_print_time":0,"layer":65,"print_time":4046,"size":7315044,"total_filament_used":13.74,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784307863,"filename":"ECC2_0.4_Bodyp_Elegoo PLA Silk _0.2_2h20m.gcode","last_print_time":0,"layer":230,"print_time":8403,"size":21433214,"total_filament_used":35.78,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#79FF79","name":"PLA","t":0}],"create_time":1784283949,"filename":"ECC2_0.4_Flexi Jellyfish V5 Small v3_Elegoo PLA Silk _0.2_2h54m.gcode","last_print_time":0,"layer":154,"print_time":10427,"size":19263424,"total_filament_used":35.75,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#DD934F","name":"PLA","t":0}],"create_time":1784219108,"filename":"ECC2_0.4_Camel (1)_Elegoo PLA Matte _0.12_5h18m.gcode","last_print_time":0,"layer":600,"print_time":19071,"size":25858731,"total_filament_used":92.88,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#DD934F","name":"PLA","t":0}],"create_time":1784189637,"filename":"ECC2_0.4_Camel (1)_Elegoo PLA Matte _0.12_5h55m.gcode","last_print_time":0,"layer":680,"print_time":21273,"size":28834423,"total_filament_used":93.67,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784160410,"filename":"ECC2_0.4_shang_Elegoo PLA Matte _0.2_2h21m.gcode","last_print_time":0,"layer":15,"print_time":8470,"size":12709217,"total_filament_used":36.5,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784150200,"filename":"ECC2_0.4_luosiluomu_Elegoo PLA Matte _0.2_2h10m.gcode","last_print_time":0,"layer":31,"print_time":7790,"size":12502883,"total_filament_used":26.41,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784142637,"filename":"ECC2_0.4_luosiluomu_Elegoo PLA Matte _0.2_1h54m.gcode","last_print_time":0,"layer":31,"print_time":6838,"size":10998655,"total_filament_used":23.26,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784134208,"filename":"ECC2_0.4_shang_Elegoo PLA Matte _0.2_1h49m.gcode","last_print_time":0,"layer":15,"print_time":6569,"size":9617494,"total_filament_used":30.21,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784129845,"filename":"ECC2_0.4_7pian_Elegoo PLA Matte _0.2_16m0s.gcode","last_print_time":0,"layer":10,"print_time":960,"size":1576250,"total_filament_used":3.69,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784122555,"filename":"ECC2_0.4_8pian_Elegoo PLA Matte _0.2_15m37s.gcode","last_print_time":0,"layer":9,"print_time":937,"size":1134711,"total_filament_used":3.82,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784115927,"filename":"ECC2_0.4_8pian_Elegoo PLA Matte _0.2_16m33s.gcode","last_print_time":0,"layer":9,"print_time":993,"size":1413134,"total_filament_used":3.86,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FFFFFF","name":"PLA","t":2}],"create_time":1784100595,"filename":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_5m50s.gcode","last_print_time":0,"layer":62,"print_time":350,"size":497331,"total_filament_used":1.25,"total_print_times":0,"type":"file"}],"offset":0,"total":237}}
+[15:44:19] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1020,"method":6000,"result":{"extruder":{"temperature":123}}}
+[15:44:20] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1021,"method":6000,"result":{"extruder":{"temperature":122}}}
+[15:44:22] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1022,"method":6000,"result":{"extruder":{"temperature":121}}}
+[15:44:25] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1023,"method":6000,"result":{"extruder":{"temperature":120}}}
+[15:44:26] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+[15:44:26] elegoo/F01AKDEMO000000/1_PC_9607/api_response
+    {"type":"PONG"}
+[15:44:27] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1024,"method":6000,"result":{"extruder":{"temperature":119}}}
+[15:44:29] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1025,"method":6000,"result":{"extruder":{"temperature":118}}}
+[15:44:30] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1046,"params":{"storage_media":"local","filename":"ECC2_0.4_Hanger Rectangular (5)_Elegoo PLA Matte _0.12_1h9m.gcode"},"id":73}
+[15:44:30] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":73,"method":1046,"result":{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784503283,"error_code":0,"filename":"ECC2_0.4_Hanger Rectangular (5)_Elegoo PLA Matte _0.12_1h9m.gcode","last_print_time":0,"layer":233,"print_time":4137,"size":9012919,"total_filament_used":24.31,"total_print_times":0}}
+[15:44:30] elegoo/F01AKDEMO000000/api_status  <api_status 85b> {"id":1026,"method":6000,"result":{"machine_status":{"status":11,"sub_status":3000}}}
+[15:44:30] elegoo/F01AKDEMO000000/api_status  <api_status 73b> {"id":1027,"method":6000,"result":{"machine_status":{"sub_status":3001}}}
+[15:44:31] elegoo/F01AKDEMO000000/api_status  <api_status 81b> {"id":1028,"method":6000,"result":{"machine_status":{"status":1,"sub_status":0}}}
+[15:44:31] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1029,"method":6000,"result":{"extruder":{"temperature":117}}}
+[15:44:32] elegoo/F01AKDEMO000000/0cliaa2497/api_request
+    {"method":1044,"params":{"storage_media":"local","offset":0,"limit":20},"id":74}
+[15:44:32] elegoo/F01AKDEMO000000/0cliaa2497/api_response
+    {"id":74,"method":1044,"result":{"error_code":0,"file_list":[{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784503283,"filename":"ECC2_0.4_Hanger Rectangular (5)_Elegoo PLA Matte _0.12_1h9m.gcode","last_print_time":0,"layer":233,"print_time":4137,"size":9012919,"total_filament_used":24.31,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#E4BD68","name":"PLA","t":0},{"color":"#3F8E43","name":"PLA","t":1},{"color":"#000000","name":"PLA","t":2}],"create_time":1784488726,"filename":"ECC2_0.4_grogu_Boolean_Elegoo PLA Matte _0.2_1h25m.gcode","last_print_time":0,"layer":81,"print_time":5079,"size":5031400,"total_filament_used":23.6,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#000000","name":"PETG","t":0}],"create_time":1784469007,"filename":"ECC2_0.4_Tab Oper v7_80 Elegoo PETG _0.2_1h25m.gcode","last_print_time":0,"layer":40,"print_time":5079,"size":6030188,"total_filament_used":32.21,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#26A69A","name":"PETG","t":0}],"create_time":1784453592,"filename":"ECC2_0.4_nozzle_cleaner_Dots_amp0p24_80 Elegoo PETG _0.12_1h3m.gcode","last_print_time":0,"layer":125,"print_time":3792,"size":8557029,"total_filament_used":9.91,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#8000FF","name":"PLA","t":0}],"create_time":1784397018,"filename":"ECC2_0.4_Сборка_Elegoo PLA Silk _0.12_13h46m.gcode","last_print_time":0,"layer":449,"print_time":49535,"size":37464350,"total_filament_used":183.59,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#8000FF","name":"PLA","t":0}],"create_time":1784364576,"filename":"ECC2_0.4_Body1_Elegoo PLA Silk _0.12_1h44m.gcode","last_print_time":0,"layer":449,"print_time":6234,"size":4424892,"total_filament_used":20.9,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#E4BD68","name":"PLA","t":0}],"create_time":1784332006,"filename":"ECC2_0.4_kpbl底座_Elegoo PLA Matte _0.12_2h25m.gcode","last_print_time":0,"layer":404,"print_time":8712,"size":24123265,"total_filament_used":40.37,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#307FE2","name":"PLA","t":0}],"create_time":1784317528,"filename":"ECC2_0.4_4 Ring Gyro Fidget_Elegoo PLA Silk _0.2_1h7m.gcode","last_print_time":0,"layer":65,"print_time":4046,"size":7315044,"total_filament_used":13.74,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FFFFFF","name":"PLA","t":0}],"create_time":1784307863,"filename":"ECC2_0.4_Bodyp_Elegoo PLA Silk _0.2_2h20m.gcode","last_print_time":0,"layer":230,"print_time":8403,"size":21433214,"total_filament_used":35.78,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#79FF79","name":"PLA","t":0}],"create_time":1784283949,"filename":"ECC2_0.4_Flexi Jellyfish V5 Small v3_Elegoo PLA Silk _0.2_2h54m.gcode","last_print_time":0,"layer":154,"print_time":10427,"size":19263424,"total_filament_used":35.75,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#DD934F","name":"PLA","t":0}],"create_time":1784219108,"filename":"ECC2_0.4_Camel (1)_Elegoo PLA Matte _0.12_5h18m.gcode","last_print_time":0,"layer":600,"print_time":19071,"size":25858731,"total_filament_used":92.88,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#DD934F","name":"PLA","t":0}],"create_time":1784189637,"filename":"ECC2_0.4_Camel (1)_Elegoo PLA Matte _0.12_5h55m.gcode","last_print_time":0,"layer":680,"print_time":21273,"size":28834423,"total_filament_used":93.67,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784160410,"filename":"ECC2_0.4_shang_Elegoo PLA Matte _0.2_2h21m.gcode","last_print_time":0,"layer":15,"print_time":8470,"size":12709217,"total_filament_used":36.5,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784150200,"filename":"ECC2_0.4_luosiluomu_Elegoo PLA Matte _0.2_2h10m.gcode","last_print_time":0,"layer":31,"print_time":7790,"size":12502883,"total_filament_used":26.41,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784142637,"filename":"ECC2_0.4_luosiluomu_Elegoo PLA Matte _0.2_1h54m.gcode","last_print_time":0,"layer":31,"print_time":6838,"size":10998655,"total_filament_used":23.26,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784134208,"filename":"ECC2_0.4_shang_Elegoo PLA Matte _0.2_1h49m.gcode","last_print_time":0,"layer":15,"print_time":6569,"size":9617494,"total_filament_used":30.21,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784129845,"filename":"ECC2_0.4_7pian_Elegoo PLA Matte _0.2_16m0s.gcode","last_print_time":0,"layer":10,"print_time":960,"size":1576250,"total_filament_used":3.69,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784122555,"filename":"ECC2_0.4_8pian_Elegoo PLA Matte _0.2_15m37s.gcode","last_print_time":0,"layer":9,"print_time":937,"size":1134711,"total_filament_used":3.82,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FF80FF","name":"PLA","t":0}],"create_time":1784115927,"filename":"ECC2_0.4_8pian_Elegoo PLA Matte _0.2_16m33s.gcode","last_print_time":0,"layer":9,"print_time":993,"size":1413134,"total_filament_used":3.86,"total_print_times":0,"type":"file"},{"color_map":[{"color":"#FFFFFF","name":"PLA","t":2}],"create_time":1784100595,"filename":"ECC2_0.4_Koala AMS_Elegoo PLA Matte _0.2_5m50s.gcode","last_print_time":0,"layer":62,"print_time":350,"size":497331,"total_filament_used":1.25,"total_print_times":0,"type":"file"}],"offset":0,"total":237}}
+[15:44:33] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1030,"method":6000,"result":{"extruder":{"temperature":116}}}
+[15:44:35] elegoo/F01AKDEMO000000/api_status  <api_status 67b> {"id":1031,"method":6000,"result":{"extruder":{"temperature":115}}}
+[15:44:36] elegoo/F01AKDEMO000000/1_PC_9607/api_request
+    {"type":"PING"}
+DONE frames=466

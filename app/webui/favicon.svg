@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#ff7a1a"/>
+  <!-- фирменный знак: кольцо, узел и четыре спицы — тот же, что в шапке приложения -->
+  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round">
+    <circle cx="32" cy="32" r="19"/>
+    <circle cx="32" cy="32" r="6.3"/>
+    <path d="M32 13v6.7M32 44.3V51M13 32h6.7M44.3 32H51"/>
+  </g>
+</svg>

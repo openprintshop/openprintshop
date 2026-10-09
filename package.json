@@ -1,0 +1,16 @@
+{
+  "name": "print-studio-desk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Сборка настольной админки Print Studio (app/webui/desk). Node нужен ТОЛЬКО для сборки — бот и покупатель работают с готовыми .js.",
+  "scripts": {
+    "build:desk": "esbuild app/webui/desk/src/main.jsx --bundle --outfile=app/webui/desk/desk.js --jsx=transform --minify --sourcemap --target=chrome110 --legal-comments=none",
+    "dev:desk": "esbuild app/webui/desk/src/main.jsx --bundle --outfile=app/webui/desk/desk.js --jsx=transform --sourcemap --target=chrome110 --watch",
+    "test:desk": "node app/webui/desk/tests/run.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "fflate": "^0.8.2",
+    "three": "0.147.0"
+  }
+}

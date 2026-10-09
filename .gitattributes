@@ -1,0 +1,5 @@
+# Сборка esbuild. tests/test_desk_bundle_fresh.py сравнивает её с пересобранной ПОБАЙТОВО,
+# а Git for Windows по умолчанию идёт с core.autocrlf=true: из чекаута файл приезжал бы с CRLF,
+# тогда как esbuild пишет LF. Без этой строки тест краснеет ложно на любом свежем клоне
+# и при мерже test -> master во время промоушена, советуя пересобрать уже свежий бандл.
+app/webui/desk/desk.js -text

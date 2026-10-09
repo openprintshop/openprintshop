@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<title>%%BRAND_TITLE%%</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
+<link rel="stylesheet" href="app.css">
+<!-- Бренд мастерской (A3, white-label) подставлен сервером в разметку, а не запрошен из JS:
+     запрос успел бы отрисовать первый кадр нашим оранжевым, и клиент увидел бы моргание
+     чужого бренда поверх своего. Именно тег с JSON, а не присваивание в коде: при открытии
+     файла напрямую (статичный превью без сервера) неподставленный плейсхолдер здесь просто
+     не распарсится, а в коде он был бы синтаксической ошибкой и снёс бы весь скрипт. -->
+<script type="application/json" id="brand-cfg">%%BRAND_JSON%%</script>
+<script>
+// Акцент ставим сразу на documentElement (он существует уже внутри <head>), до первого
+// кадра. Производные --accent-soft/-line/-press собраны в app.css через color-mix от
+// --accent, поэтому пересчитываются сами.
+window.__BRAND__ = (function () {
+  try { return JSON.parse(document.getElementById('brand-cfg').textContent) || {}; }
+  catch (e) { return {}; }
+})();
+if (window.__BRAND__.accent) {
+  document.documentElement.style.setProperty('--accent', window.__BRAND__.accent);
+}
+</script>
+<style>
+  html, body, #app-root { margin: 0; height: 100%; }
+  body { background: #0e1217; position: relative; overscroll-behavior: none; }
+</style>
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script>
+// Версия фронта вшита сервером в index.html (%%VER%% → хэш файлов app/webui). Сверяем её с
+// /api/version: если расходится — эта копия пришла из залипшего кеша Telegram WebView, и мы
+// сами перезагружаемся с новым ?v (новый ключ кеша). Guard в sessionStorage против зацикливания.
+window.__APPVER__ = "%%VER%%";
+(function () {
+  // Бейдж «TEST» в мини-аппе, когда запущена тестовая версия (OpenTodo 31485676) — иначе её
+  // визуально не отличить от боевой. Делаем на чистом DOM (вне React), чтобы был виден всегда.
+  function showTestBadge(rev) {
+    if (document.getElementById('chan-badge')) return;            // идемпотентно
+    var b = document.createElement('div');
+    b.id = 'chan-badge';
+    b.textContent = 'TEST' + (rev ? ' · ' + rev : '');
+    b.style.cssText = 'position:fixed;top:max(6px,env(safe-area-inset-top));left:50%;' +
+      'transform:translateX(-50%);z-index:99999;background:#ffb020;color:#1a0d02;' +
+      'font:700 11px/1 Onest,system-ui,sans-serif;letter-spacing:.05em;padding:4px 9px;' +
+      'border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.4);pointer-events:none';
+    document.body.appendChild(b);
+  }
+  function check() {
+    fetch('/api/version?_=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        window.__CHANNEL__ = j && j.channel;                      // канал доступен фронту (app.js)
+        if (j && j.is_test) showTestBadge(j.rev);
+        var sv = j && j.v, mine = window.__APPVER__;
+        if (!sv || !mine || mine === '%%' + 'VER%%') return;     // версия не вшита (raw) — не трогаем
+        if (sv === mine) { try { sessionStorage.removeItem('verReload'); } catch (e) {} return; }
+        var tried = null; try { tried = sessionStorage.getItem('verReload'); } catch (e) {}
+        if (tried === sv) return;                                 // уже пробовали эту версию — без зацикливания
+        try { sessionStorage.setItem('verReload', sv); } catch (e) {}
+        var p = new URLSearchParams(location.search); p.set('v', sv);
+        location.replace(location.pathname + '?' + p.toString());
+      })
+      .catch(function () {});
+  }
+  check();
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) check(); });
+})();
+</script>
+</head>
+<body>
+<div id="app-root"></div>
+<script src="icons.js"></script>
+<script src="api.js"></script>
+<script src="back.js"></script>
+<script src="screens_core.js"></script>
+<script src="screens_3d.js"></script>
+<script src="screens_more.js"></script>
+<script src="screens_custom.js"></script>
+<!-- Планировщик Multiboard (planner_engine.js + screens_planner.js) грузится лениво при первом
+     заходе (app.js, PlannerLazy): в открытой версии проекта этих файлов нет. -->
+<!-- Gridfinity-конфигуратор: здесь только тонкий React-хост; сам движок
+     (gridfinity_engine.js) и three.js он подгружает лениво при первом заходе. -->
+<script src="screens_gridfinity.js"></script>
+<script src="screens_workshop.js"></script>
+<!-- «Приложения» (таб клиента, 2026-09-02): органайзер в ящик с живым 3D-превью, планировщик,
+     заказ по фото. three.js для превью подгружается лениво — тем же маркером, что у вьюера. -->
+<script src="screens_apps.js"></script>
+<!-- screens_admin*.js (406 КиБ) здесь НЕТ намеренно: экраны мастера нужны единицам, а тегами
+     в разметке они ехали каждому клиенту при каждом открытии — страница отдаётся с no-store,
+     то есть заново и целиком. Их подгружает app.js (ensureAdmin) при первом заходе на любой
+     admin*-экран; пока файлы едут, вместо экрана показана заглушка, при обрыве — ошибка
+     с кнопкой «Повторить». Мок-домен (api_mock.js) по той же причине подключает api.js —
+     и только когда авторизоваться нечем. -->
+<script src="app.js"></script>
+</body>
+</html>

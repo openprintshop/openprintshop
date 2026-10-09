@@ -1,0 +1,33 @@
+SN='F01AKDEMO000000' IP=192.168.1.50 dur=100.0s
+CONNACK ptype=0x20 rc=0
+[02:37:03] elegoo/F01AKDEMO000000/1_PC_2769/api_request  method=None id=None
+    {"type": "PING"}
+[02:37:03] elegoo/F01AKDEMO000000/1_PC_2769/api_response  method=None id=None
+    {"type": "PONG"}
+[02:37:13] elegoo/F01AKDEMO000000/1_PC_2769/api_request  method=None id=None
+    {"type": "PING"}
+[02:37:13] elegoo/F01AKDEMO000000/1_PC_2769/api_response  method=None id=None
+    {"type": "PONG"}
+[02:37:23] elegoo/F01AKDEMO000000/1_PC_2769/api_request  method=None id=None
+    {"type": "PING"}
+[02:37:23] elegoo/F01AKDEMO000000/1_PC_2769/api_response  method=None id=None
+    {"type": "PONG"}
+[02:37:26] elegoo/F01AKDEMO000000/0clib00c1f/api_request  method=1036 id=1
+    {"method": 1036, "id": 1}
+[02:37:26] elegoo/F01AKDEMO000000/0clib00c1f/api_request  method=2005 id=2
+    {"method": 2005, "id": 2}
+[02:37:26] elegoo/F01AKDEMO000000/0clib00c1f/api_request  method=1044 id=3
+    {"method": 1044, "params": {"storage_media": "local", "offset": 0, "limit": 20}, "id": 3}
+[02:37:26] elegoo/F01AKDEMO000000/0clib00c1f/api_request  method=1002 id=4
+    {"method": 1002, "id": 4}
+Traceback (most recent call last):
+  File "%TEMP%\scratchpad\_sniff_mqtt.py", line 61, in <module>
+    emit(f"[{time.strftime('%H:%M:%S')}] {topic}  method={method} id={rid}\n    {payload}")
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "%TEMP%\scratchpad\_sniff_mqtt.py", line 24, in emit
+    print(s, flush=True)
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 2693-2695: character maps to <undefined>

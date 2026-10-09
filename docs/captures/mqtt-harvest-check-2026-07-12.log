@@ -1,0 +1,11 @@
+SN='F01AKDEMO000000' IP=192.168.1.50 dur=90.0s — слушаю api_response, кормлю harvest
+
+api_response получено: 18
+harvest: файлов=20, история=44
+  ECC2_0.4_Fillet34_Elegoo PETG Orange _0.2_49m22s.gcode
+    -> {'grams': 10.39, 'print_time': 2962, 'colors': [{'hex': '#F08000', 'type': 'PETG', 'extruder': 1}], 'duration_sec': 3091, 'status': 1, 'ok': True}
+  ECC2_0.4_Move Face24_Elegoo PETG Orange _0.2_34m18s.gcode
+    -> {'grams': 14.11, 'print_time': 2058, 'colors': [{'hex': '#F08000', 'type': 'PETG', 'extruder': 1}], 'duration_sec': 2153, 'status': 1, 'ok': True}
+  ECC2_0.4_Move Face24_Elegoo PETG Orange _0.2_33m28s.gcode
+    -> {'grams': 13.85, 'print_time': 2008, 'colors': [{'hex': '#F08000', 'type': 'PETG', 'extruder': 1}], 'duration_sec': 2111, 'status': 1, 'ok': True}
+DONE.
