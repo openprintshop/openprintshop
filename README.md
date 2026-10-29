@@ -110,6 +110,9 @@ Project layout: `run.py` (entry point), `app/` (bot handlers, web server, pricin
 printer drivers in `app/printerdrv/`, storage in `app/store/`), `app/webui/` (Mini App and the
 desktop admin), `tools/` (installer and utilities), `tests/`.
 
+Step-by-step local setup on Linux/macOS, test results and known issues outside Windows (in Russian):
+[docs/local-setup.md](docs/local-setup.md).
+
 ## Contributing, security, license
 
 - Contributions are welcome — please read [CONTRIBUTING.md](CONTRIBUTING.md).

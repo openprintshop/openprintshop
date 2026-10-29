@@ -105,6 +105,9 @@ npm install && npm run build:desk         # только если меняли a
 драйверы принтеров в `app/printerdrv/`, хранилище в `app/store/`), `app/webui/` (Mini App и
 настольная админка), `tools/` (установщик и утилиты), `tests/`.
 
+Подробно про локальную установку на Linux/macOS, результаты тестов и известные проблемы вне
+Windows: [docs/local-setup.md](docs/local-setup.md).
+
 ## Участие, безопасность, лицензия
 
 - Будем рады помощи — см. [CONTRIBUTING.md](CONTRIBUTING.md).
