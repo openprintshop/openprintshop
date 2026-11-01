@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenPrintShop — open-source order desk for 3D printing studios</title>
+  <meta name="description" content="Customers send a model to your Telegram bot and get a slicer-accurate price; you run orders, customers, filament spools and printers from a desktop admin on the studio PC. AGPL-3.0.">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="ru.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="img/favicon.png" alt="" width="28" height="28">OPENPRINTSHOP</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#start">Quick start</a>
+        <a href="https://github.com/openprintshop/openprintshop">GitHub</a>
+        <a class="lang" href="ru.html" hreflang="ru" lang="ru">RU</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <h1>An open-source order desk for <em>3D printing studios</em></h1>
+      <p class="lead">Customers send a model to your Telegram bot and get an instant, slicer-accurate
+        price. You run orders, customers, filament spools and printers from a desktop admin on the
+        studio PC.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/openprintshop/openprintshop">View on GitHub</a>
+        <a class="btn" href="#start">Quick start</a>
+      </div>
+      <p class="note">Free software under the GNU AGPL v3.0. The user interface is in Russian for now;
+        translations are welcome.</p>
+
+      <figure class="hero-shot">
+        <div class="shot">
+          <img src="img/desk-home.webp" width="1200" height="750"
+               alt="Desktop admin, Dashboard screen: printer panel, alerts, revenue, print queue, tasks and event feed">
+        </div>
+        <figcaption>Desktop admin, “Dashboard” screen, on a fresh install with an empty database
+          and no printer connected.</figcaption>
+      </figure>
+    </div>
+
+    <section id="features">
+      <div class="wrap">
+        <h2>What it does</h2>
+        <p class="sub">One bot for your customers and one admin for the studio, both served from the
+          same PC.</p>
+        <div class="grid">
+          <div class="card">
+            <span class="tag">For customers · Telegram bot + Mini App</span>
+            <h3>Price in seconds</h3>
+            <ul>
+              <li>Send a model file (<code>.stl</code>, <code>.3mf</code>, <code>.obj</code>,
+                <code>.step</code>, <code>.zip</code>) or a link to Printables, Thingiverse or a direct file.</li>
+              <li>See a 3D preview and get a price, then refine it: plastic, colour, quality, strength,
+                quantity, urgency.</li>
+              <li>Cart and orders with statuses, chat with the studio, payment through Telegram Payments
+                (with the studio's own provider), delivery options and tracking, a PDF quote.</li>
+              <li>A catalogue of ready-made products and a gridfinity organizer configurator.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag">For the studio · desktop admin</span>
+            <h3>Run the whole shop</h3>
+            <ul>
+              <li>Order pipeline and print queue, revenue dashboard, CRM with customer history,
+                segments, broadcasts and tasks.</li>
+              <li>A price formula you control: material, machine time, setup, failure buffer, markup,
+                quantity discounts, minimum price.</li>
+              <li>Spool inventory with tare weights and a stock ledger, calibration notes with QR passports.</li>
+              <li>Owner/operator roles, white-label branding, backups including an off-site copy,
+                self-update from git, error log.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag">Printers</span>
+            <h3>Control and print journal</h3>
+            <ul>
+              <li>Elegoo Centauri Carbon 2 — the deepest integration: status, timelapses, resume from a layer.</li>
+              <li>Klipper / Moonraker.</li>
+              <li>Bambu Lab over LAN (experimental).</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag">Slicing</span>
+            <h3>Real slicer, real numbers</h3>
+            <ul>
+              <li>Exact grams and print time from a slicer CLI on the same PC: OrcaSlicer (recommended),
+                ElegooSlicer or Bambu Studio.</li>
+              <li>A built-in estimator gives the instant first price.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <span class="tag">Optional modules</span>
+          <p>STEP→STL conversion (FreeCAD), parametric models (OpenSCAD), a status dashboard for a
+            TURZX 8.8" USB display, AI avatars (NVIDIA GPU), semantic catalogue search, model search
+            across Printables and Thingiverse.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screens">
+      <div class="wrap">
+        <h2>Screenshots</h2>
+        <p class="sub">Taken from the desktop admin running locally on a fresh install, so the numbers
+          are zeros and the lists are short.</p>
+        <div class="grid">
+          <figure>
+            <div class="shot"><img src="img/desk-pricing.webp" width="1200" height="750" loading="lazy"
+              alt="Prices and discounts screen: machine-time rate, setup fee, volume discounts, personal discounts, promo codes"></div>
+            <figcaption>Prices and discounts: rates, markup, volume tiers, promo codes.</figcaption>
+          </figure>
+          <figure>
+            <div class="shot"><img src="img/desk-plastics.webp" width="1200" height="750" loading="lazy"
+              alt="Plastics screen: material list with price per kg, stock and failure rate"></div>
+            <figcaption>Plastics: materials, price per kg, spool stock.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <p class="sub">Everything runs on one always-on Windows PC in the studio; <code>watchdog.py</code>
+          keeps the bot alive.</p>
+<pre class="diagram">Telegram ──► bot + web server (run.py, aiogram + aiohttp) ──► SQLite (data/)
+  ▲              │                │
+  │              │                └─► slicer CLI (OrcaSlicer / ElegooSlicer / Bambu Studio)
+  │              │                    → exact grams and print time
+  │              └─► printers on your LAN (Elegoo MQTT/HTTP, Moonraker, Bambu)
+  │
+Mini App ◄── public HTTPS address: Cloudflare Tunnel (quick or named) or your own proxy</pre>
+      </div>
+    </section>
+
+    <section id="start">
+      <div class="wrap">
+        <h2>Quick start</h2>
+        <p class="sub">You need a Windows 10/11 x64 PC that stays on, a bot token from
+          <a href="https://t.me/BotFather">@BotFather</a>, your Telegram user ID
+          (<a href="https://t.me/userinfobot">@userinfobot</a>) and a slicer on the same PC.</p>
+        <div class="steps">
+          <div class="step">
+            <h3>Install with one command (PowerShell)</h3>
+            <p>The script installs Python and Git with winget if needed, clones the repository to
+              <code>C:\OpenPrintShop\bot</code>, creates the virtual environment, asks for the bot token
+              and admin IDs, and registers the watchdog to start at logon.</p>
+<pre class="code">irm https://raw.githubusercontent.com/openprintshop/openprintshop/main/tools/installer/install.ps1 -OutFile install.ps1
+powershell -ExecutionPolicy Bypass -File .\install.ps1</pre>
+          </div>
+          <div class="step">
+            <h3>Or install manually</h3>
+<pre class="code">git clone https://github.com/openprintshop/openprintshop.git
+cd openprintshop
+python -m venv .venv
+.\.venv\Scripts\pip install -r requirements.txt
+copy .env.example .env     <span class="c"># set BOT_TOKEN and ADMIN_IDS</span>
+.\.venv\Scripts\python run.py</pre>
+          </div>
+          <div class="step">
+            <h3>Open it</h3>
+            <p>Send <code>/start</code> to your bot. On the studio PC the desktop admin is at
+              <code>http://127.0.0.1:8081/app/desk/</code>. Prices, plastics, printers, branding,
+              payments and delivery are configured in the admin UI.</p>
+          </div>
+        </div>
+        <p class="note">Developing on Linux or macOS? See the step-by-step
+          <a href="https://github.com/openprintshop/openprintshop/blob/main/docs/local-setup.md">local setup guide</a>
+          (in Russian) with test results and known issues outside Windows.</p>
+      </div>
+    </section>
+
+    <section id="docs">
+      <div class="wrap">
+        <h2>Links</h2>
+        <ul class="links">
+          <li><a href="https://github.com/openprintshop/openprintshop">Repository</a> <span>— source code, issues, releases</span></li>
+          <li><a href="https://github.com/openprintshop/openprintshop#readme">README</a> <span>— requirements, install, updates, development</span></li>
+          <li><a href="https://github.com/openprintshop/openprintshop/blob/main/README.ru.md">README in Russian</a></li>
+          <li><a href="https://github.com/openprintshop/openprintshop/blob/main/docs/local-setup.md">docs/local-setup.md</a> <span>— local setup, running and tests (RU)</span></li>
+          <li><a href="https://github.com/openprintshop/openprintshop/blob/main/CONTRIBUTING.md">Contributing</a> · <a href="https://github.com/openprintshop/openprintshop/blob/main/SECURITY.md">Security policy</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>OpenPrintShop is licensed under the
+        <a href="https://github.com/openprintshop/openprintshop/blob/main/LICENSE">GNU Affero General Public License v3.0</a>.
+        Third-party components: <a href="https://github.com/openprintshop/openprintshop/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>.</p>
+      <p>Built for a real small print studio and opened for everyone.</p>
+    </div>
+  </footer>
+</body>
+</html>

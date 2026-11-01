@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenPrintShop — открытая система приёма заказов для студий 3D-печати</title>
+  <meta name="description" content="Клиент присылает модель Telegram-боту и за секунды получает цену по настоящему слайсеру. Заказы, клиенты, катушки и принтеры — в настольной админке на ПК студии. AGPL-3.0.">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="ru.html"><img src="img/favicon.png" alt="" width="28" height="28">OPENPRINTSHOP</a>
+      <nav class="nav" aria-label="Главное меню">
+        <a href="#features">Возможности</a>
+        <a href="#start">Быстрый старт</a>
+        <a href="https://github.com/openprintshop/openprintshop">GitHub</a>
+        <a class="lang" href="./" hreflang="en" lang="en">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <h1>Открытая система приёма заказов для <em>студий 3D-печати</em></h1>
+      <p class="lead">Клиент присылает модель вашему Telegram-боту и за секунды получает цену,
+        посчитанную по настоящему слайсеру. Вы ведёте заказы, клиентов, катушки и принтеры
+        в настольной админке на ПК студии.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/openprintshop/openprintshop">Открыть на GitHub</a>
+        <a class="btn" href="#start">Быстрый старт</a>
+      </div>
+      <p class="note">Свободное ПО под лицензией GNU AGPL v3.0.</p>
+
+      <figure class="hero-shot">
+        <div class="shot">
+          <img src="img/desk-home.webp" width="1200" height="750"
+               alt="Настольная админка, экран «Пульт»: принтер, требует внимания, выручка, очередь печати, задачи, лента событий">
+        </div>
+        <figcaption>Настольная админка, экран «Пульт», на свежей установке: база пустая, принтер
+          не подключён.</figcaption>
+      </figure>
+    </div>
+
+    <section id="features">
+      <div class="wrap">
+        <h2>Что умеет</h2>
+        <p class="sub">Бот для клиентов и админка для студии — оба работают с одного ПК.</p>
+        <div class="grid">
+          <div class="card">
+            <span class="tag">Клиенту · бот и Mini App в Telegram</span>
+            <h3>Цена за секунды</h3>
+            <ul>
+              <li>Прислать файл модели (<code>.stl</code>, <code>.3mf</code>, <code>.obj</code>,
+                <code>.step</code>, <code>.zip</code>) или ссылку на Printables, Thingiverse или прямой файл.</li>
+              <li>Увидеть 3D-превью и получить цену, потом уточнить: пластик, цвет, качество,
+                прочность, тираж, срочность.</li>
+              <li>Корзина и заказы со статусами, чат со студией, онлайн-оплата через Telegram Payments
+                (провайдер подключает сама студия), доставка с трекингом, PDF-смета.</li>
+              <li>Витрина готовых изделий и конфигуратор органайзеров gridfinity.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag">Студии · настольная админка</span>
+            <h3>Вся мастерская в одном окне</h3>
+            <ul>
+              <li>Очередь заказов и печати, дашборд выручки, CRM: история клиента, сегменты,
+                рассылки, задачи.</li>
+              <li>Своя формула цены: пластик, машинное время, подготовка, буфер на брак, наценка,
+                скидки за тираж, минимальная цена.</li>
+              <li>Учёт катушек с тарой и журналом движения, база калибровок с QR-паспортами.</li>
+              <li>Роли владелец/оператор, white-label (своё имя, логотип, цвет), бэкапы с копией на
+                другой носитель, самообновление из git, журнал ошибок.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag">Принтеры</span>
+            <h3>Управление и журнал печати</h3>
+            <ul>
+              <li>Elegoo Centauri Carbon 2 — глубже всего: статус, таймлапсы, допечатка со слоя.</li>
+              <li>Klipper / Moonraker.</li>
+              <li>Bambu Lab по локальной сети (бета).</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag">Слайсинг</span>
+            <h3>Настоящий слайсер — настоящие цифры</h3>
+            <ul>
+              <li>Точные граммы и время от слайсера на том же ПК: OrcaSlicer (рекомендуется),
+                ElegooSlicer или Bambu Studio.</li>
+              <li>Встроенная оценка даёт мгновенную первую цену.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <span class="tag">Дополнительно, по желанию</span>
+          <p>Конвертация STEP→STL (FreeCAD), параметрические модели (OpenSCAD), дашборд на дисплей
+            TURZX 8.8" по USB, аватарки ИИ (видеокарта NVIDIA), умный поиск по каталогу, поиск
+            моделей на Printables и Thingiverse.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screens">
+      <div class="wrap">
+        <h2>Скриншоты</h2>
+        <p class="sub">Сняты с настольной админки, запущенной локально на чистой установке, поэтому
+          везде нули и короткие списки.</p>
+        <div class="grid">
+          <figure>
+            <div class="shot"><img src="img/desk-pricing.webp" width="1200" height="750" loading="lazy"
+              alt="Экран «Цены и скидки»: ставка машинного времени, подготовка, скидки за объём, персональные скидки, промокоды"></div>
+            <figcaption>Цены и скидки: ставки, наценка, скидки за тираж, промокоды.</figcaption>
+          </figure>
+          <figure>
+            <div class="shot"><img src="img/desk-plastics.webp" width="1200" height="750" loading="lazy"
+              alt="Экран «Пластики»: список материалов с ценой за кг, остатком и браком"></div>
+            <figcaption>Пластики: материалы, цена за кг, остаток катушек.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>Как устроено</h2>
+        <p class="sub">Всё работает на одном постоянно включённом Windows-ПК студии;
+          <code>watchdog.py</code> держит бота живым.</p>
+<pre class="diagram">Telegram ──► бот + веб-сервер (run.py, aiogram + aiohttp) ──► SQLite (data/)
+  ▲              │                │
+  │              │                └─► слайсер CLI (OrcaSlicer / ElegooSlicer / Bambu Studio)
+  │              │                    → точные граммы и время
+  │              └─► принтеры в локальной сети (Elegoo MQTT/HTTP, Moonraker, Bambu)
+  │
+Mini App ◄── публичный HTTPS-адрес: Cloudflare Tunnel или свой прокси</pre>
+      </div>
+    </section>
+
+    <section id="start">
+      <div class="wrap">
+        <h2>Быстрый старт</h2>
+        <p class="sub">Нужны Windows 10/11 x64 на ПК, который не выключается, токен бота от
+          <a href="https://t.me/BotFather">@BotFather</a>, ваш Telegram ID
+          (<a href="https://t.me/userinfobot">@userinfobot</a>) и слайсер на том же ПК.</p>
+        <div class="steps">
+          <div class="step">
+            <h3>Установка одной командой (PowerShell)</h3>
+            <p>Скрипт при необходимости поставит Python и Git через winget, склонирует репозиторий в
+              <code>C:\OpenPrintShop\bot</code>, создаст окружение, спросит токен бота и ID
+              администраторов и поставит сторожа в автозапуск.</p>
+<pre class="code">irm https://raw.githubusercontent.com/openprintshop/openprintshop/main/tools/installer/install.ps1 -OutFile install.ps1
+powershell -ExecutionPolicy Bypass -File .\install.ps1</pre>
+          </div>
+          <div class="step">
+            <h3>Или вручную</h3>
+<pre class="code">git clone https://github.com/openprintshop/openprintshop.git
+cd openprintshop
+python -m venv .venv
+.\.venv\Scripts\pip install -r requirements.txt
+copy .env.example .env     <span class="c"># BOT_TOKEN и ADMIN_IDS</span>
+.\.venv\Scripts\python run.py</pre>
+          </div>
+          <div class="step">
+            <h3>Открыть</h3>
+            <p>Напишите боту <code>/start</code>. На ПК студии настольная админка открывается по адресу
+              <code>http://127.0.0.1:8081/app/desk/</code>. Цены, пластики, принтеры, бренд, оплата
+              и доставка настраиваются в админке.</p>
+          </div>
+        </div>
+        <p class="note">Разработка на Linux или macOS — пошагово в
+          <a href="https://github.com/openprintshop/openprintshop/blob/main/docs/local-setup.md">docs/local-setup.md</a>:
+          установка, запуск, результаты тестов и известные проблемы вне Windows.</p>
+      </div>
+    </section>
+
+    <section id="docs">
+      <div class="wrap">
+        <h2>Ссылки</h2>
+        <ul class="links">
+          <li><a href="https://github.com/openprintshop/openprintshop">Репозиторий</a> <span>— код, задачи, релизы</span></li>
+          <li><a href="https://github.com/openprintshop/openprintshop/blob/main/README.ru.md">README</a> <span>— требования, установка, обновления, разработка</span></li>
+          <li><a href="https://github.com/openprintshop/openprintshop/blob/main/docs/local-setup.md">docs/local-setup.md</a> <span>— локальная установка, запуск и тесты</span></li>
+          <li><a href="https://github.com/openprintshop/openprintshop/blob/main/CONTRIBUTING.md">Как помочь проекту</a> · <a href="https://github.com/openprintshop/openprintshop/blob/main/SECURITY.md">Безопасность</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>OpenPrintShop распространяется по лицензии
+        <a href="https://github.com/openprintshop/openprintshop/blob/main/LICENSE">GNU Affero General Public License v3.0</a>.
+        Сторонние компоненты: <a href="https://github.com/openprintshop/openprintshop/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>.</p>
+      <p>Сделано для настоящей небольшой студии печати и открыто для всех.</p>
+    </div>
+  </footer>
+</body>
+</html>
